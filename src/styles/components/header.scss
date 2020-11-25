@@ -1,0 +1,10 @@
+.navbar-brand-text {
+  font-weight: bold;
+  font-size: 1.9rem;
+  margin-left: 5px;
+  color: #dc3545;
+
+  @media only screen and (max-width: 373px) {
+    font-size: 1rem;
+  }
+}

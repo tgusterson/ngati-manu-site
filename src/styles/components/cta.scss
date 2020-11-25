@@ -1,0 +1,17 @@
+.cta-home {
+  text-align: center;
+  width: 100%;
+  min-height: 75px;
+  background-color: $primary;
+  color: #fff;
+  padding: 15px;
+  
+  span {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+}

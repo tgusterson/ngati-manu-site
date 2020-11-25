@@ -1,0 +1,77 @@
+.homeCard-container-left, .homeCard-container-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+}
+
+.homeCard-container-left {
+  background: #FFF;
+
+  @media only screen and (max-width: 575px) {
+    flex-direction: column;
+  }
+}
+
+.homeCard-container-right {
+  background: #EEE;
+
+  @media only screen and (max-width: 575px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.homeCard-text-left, .homeCard-text-right {
+  display: flex;
+  width: 100%;
+  min-width: 225px;
+  align-items: center;
+}
+
+.homeCard-text-left {
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 1.7rem;
+  word-wrap: break-word;
+
+  @media only screen and (max-width: 575px) {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+
+    button {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.homeCard-text-right {
+  justify-content: flex-end;
+  text-align: right;
+  padding-right: 1.7rem;
+
+  @media only screen and (max-width: 575px) {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    
+    button {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.homeCard-image {
+  img {
+    width:100%;
+    min-width:340px;
+    max-width:575px;
+    height: 245px;
+    object-fit: cover;
+
+    @media only screen and (max-width: 320px) {
+      min-width:320px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+$theme-colors: (
+    "primary": #dc3545,
+    "info": #380613
+);
+
+$primary: #dc3545;
+$info: #380613;
+
+@import "./components/header";
+@import "./components/footer";
+@import "./components/homeCard";
+@import "./components/cta";
+@import "./components/homeCarousel";
+@import "~bootstrap/scss/bootstrap";
+
