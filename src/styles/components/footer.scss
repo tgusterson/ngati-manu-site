@@ -4,7 +4,7 @@
   color: #888;
 
   h5 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   ul {
@@ -16,8 +16,9 @@
     padding: 0 0 3px 3px;
   }
 
-  li, .footer-social-icons {
+  li {
     cursor: pointer;
+    font-size: 0.9rem;
   }
 
   a {
@@ -45,7 +46,7 @@
 .footer-social {
   display: flex;
   flex-direction: column;
-  padding-right: 0.8rem;
+  padding-right: 0.9rem;
 }
 
 .footer-social-icons {
@@ -55,7 +56,8 @@
 }
 
 .footer-social-icons-icon{
-  font-size: 3rem;
+  font-size: 2.3rem;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 500px) {

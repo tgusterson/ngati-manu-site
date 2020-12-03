@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Button from 'react-bootstrap/Button'
 
-export default function homeCard({ left, right, image }) {
+export default function homeCard({ left, right, image, heading, subheading, body, location }) {
   return (
     <>
       {
@@ -12,9 +13,10 @@ export default function homeCard({ left, right, image }) {
           </div>
           <div className="homeCard-text-left">
             <div>
-              <h4>Pokai o Ngāti Manu</h4>
-              <p>Biodiversity Management</p>
-              <Button variant="info">Read More</Button>
+              <h4>{heading}</h4>
+              <h6>{subheading}</h6>
+              <p>{body}</p>
+              <Link className="btn btn-info" to={location}>Read More</Link>
             </div>
           </div>
         </div>
@@ -23,9 +25,10 @@ export default function homeCard({ left, right, image }) {
         right && <div className="homeCard-container-right">
           <div className="homeCard-text-right">
             <div>
-              <h4>Kaitiaki o te Ahi</h4>
-              <p>Ngāti Manu Cadetship</p>
-              <Button variant="info">Read More</Button>
+              <h4>{heading}</h4>
+              <h6>{subheading}</h6>
+              <p>{body}</p>
+              <Link className="btn btn-info" to={location}>Read More</Link>
             </div>
           </div>
           <div className="homeCard-image">

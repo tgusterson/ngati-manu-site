@@ -1,20 +1,24 @@
-.homeCard-container-left, .homeCard-container-right {
+.repCard-container-left, .repCard-container-right {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
   padding: 3rem;
 
-  h4 {
-    padding-top: 0.66rem;
-  }
-
-  h6 {
-    margin-top: -10px;
+  img {
+    width:100%;
+    min-width:340px;
+    max-width:575px;
+    height: 245px;
+    object-fit: contain;
   }
 
   p {
     margin-top: 10px;
+  }
+
+  strong {
+    color: $primary;
   }
 
   @media only screen and (max-width: 768px) {
@@ -22,7 +26,7 @@
   }
 }
 
-.homeCard-container-left {
+.repCard-container-left {
   background: #FFF;
 
   @media only screen and (max-width: 768px) {
@@ -30,7 +34,7 @@
   }
 }
 
-.homeCard-container-right {
+.repCard-container-right {
   background: #EEE;
 
   @media only screen and (max-width: 768px) {
@@ -38,50 +42,60 @@
   }
 }
 
-.homeCard-text-left {
-  justify-content: flex-start;
-  text-align: left;
-  padding-left: 2.7rem;
-}
-
-.homeCard-text-right {
-  justify-content: flex-end;
-  text-align: right;
-  padding-right: 2.7rem;
-}
-
-.homeCard-text-left, .homeCard-text-right {
+.repCard-text-left, .repCard-text-right {
   display: flex;
-  width: 90%;
+  width: 100%;
   min-width: 225px;
   align-items: center;
+}
+
+.repCard-text-left {
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 1.8rem;
   word-wrap: break-word;
-  
+
   @media only screen and (max-width: 768px) {
     justify-content: center;
     text-align: center;
-    padding: 0;
-    
-    a {
+    padding: 10px;
+
+    button {
       margin-bottom: 15px;
     }
   }
 }
 
-.homeCard-image {
+.repCard-text-right {
+  justify-content: flex-end;
+  text-align: right;
+  padding-right: 1.8rem;
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    
+    button {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.repCard-image {
   img {
     width:100%;
     min-width:340px;
     max-width:575px;
     height: 245px;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 5px;
 
     @media only screen and (max-width: 320px) {
       min-width:320px;
     }
-
-    @media only screen and (max-width: 280px) {
-      min-width:280px;
+    @media only screen and (max-width: 768px) {
+      margin-top: 15px;
     }
   }
 }

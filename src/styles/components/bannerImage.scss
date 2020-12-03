@@ -1,0 +1,38 @@
+.banner-image {
+  position: relative;
+
+  h1 {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    // border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+
+    top: 10px;
+    left: 4px;
+
+    @media only screen and (min-width: 370px) {
+      top: 50px;
+      left: 15px;
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: 500px) {
+      top: 75px;
+      left: 30px;
+      font-size: 2rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      top: 30%;
+      left: 10%;
+    }
+  }
+
+  img {
+    max-height: 400px;
+    filter: brightness(55%);
+  }
+}

@@ -12,6 +12,8 @@ import HomeCard from "../components/homeCard"
 
 import Biodiversity from '../../content/assets/index/cards/biodiversity.png'
 import Cadetship from '../../content/assets/index/cards/cadetship.png'
+import Fern from '../../content/assets/index/cards/fern.png'
+import Events from '../../content/assets/index/cards/events.png'
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -24,11 +26,37 @@ const Index = ({ data, location }) => {
           <Container fluid style={{ padding: 0, margin: 0 }}>
             <Carousel />
             <CTA />
-            <HomeCard left image={Biodiversity} />
-            <HomeCard right image={Cadetship} />
+            <HomeCard
+              left
+              location={"/registration/"}
+              image={Biodiversity}
+              heading={"Pokai o Ngāti Manu"}
+              subheading={"Biodiversity Management"}
+              body={"Nā Ngāti Manu, Mā Ngati Manu, e ai ki a Ngāti Manu ki Te Herenga o Ngāti Manu hei tūāpapa ki te whakawhanake i ngā uri whakatipu, i ngā uri morehu, i ngā e haere mai ana."}
+            />
+            <HomeCard
+              right
+              image={Cadetship}
+              heading={"Kaitiaki o te Ahi"}
+              subheading={"Ngāti Manu Cadetship"}
+              body={"An innovative marae-based learning programme & curriculum at Te Karetu Marae."}
+            />
+            <HomeCard
+              left
+              location={"/tahuhu/"}
+              image={Fern}
+              heading={"Tāhuhu Nui o te Ngāti Manu"}
+              subheading={"Governance"}
+              body={"Nā Ngāti Manu, Mā Ngati Manu, e ai ki a Ngāti Manu."}
+            />
+            <HomeCard
+              right
+              location={"/events/"}
+              image={Events}
+              heading={"Ngāti Manu Events"}
+              body={"Check out what is happening and join the rest of Ngāti Manu in celebrations, discussions and other significant events."}
+            />
           </Container>
-        </Row>
-        <Row>
         </Row>
       </Container>
     </Layout>
@@ -43,19 +71,6 @@ export const pageQuery = graphql`
             siteMetadata {
             title
           }
-    }
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC }) {
-            nodes {
-            excerpt
-        fields {
-            slug
-          }
-        frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
     }
   }
 `
