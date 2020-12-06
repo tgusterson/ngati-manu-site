@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -22,6 +22,9 @@ const Events = ({ data, location }) => {
             <BannerImage heading={"Tāhuhu Strategy"} image={Waterfall} imageAlt={"Tāhuhu Strategy banner"} />
             <Container className="markdown-content-container">
               <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
+            </Container>
+            <Container>
+              <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please <a href="mailto:tahuhunui@gmail.com">tahuhunui@gmail.com</a> for more information.</p>
             </Container>
           </Container>
         </Row>

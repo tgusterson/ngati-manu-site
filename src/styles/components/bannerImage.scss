@@ -1,15 +1,15 @@
 .banner-image {
   position: relative;
 
-  h1 {
+  .heading1, .heading2 {
     position: absolute;
     color: white;
     z-index: 1;
-    // border: 1px solid white;
-    border-radius: 5px;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
 
+  .heading1 {
     top: 10px;
     left: 4px;
 
@@ -27,6 +27,34 @@
 
     @media only screen and (min-width: 768px) {
       top: 30%;
+      left: 10%;
+    }
+  }
+
+  .heading2 {
+    top: 35px;
+    left: 4px;
+
+    @media only screen and (min-width: 370px) {
+      top: 80px;
+      left: 15px;
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: 370px) {
+      top: 80px;
+      left: 15px;
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: 500px) {
+      top: 115px;
+      left: 30px;
+      font-size: 2rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      top: 40%;
       left: 10%;
     }
   }

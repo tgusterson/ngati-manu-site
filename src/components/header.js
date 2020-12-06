@@ -15,7 +15,7 @@ export default function Header() {
     <Navbar bg="light" expand="lg" sticky="top">
       <Container>
         <Link className="navbar-brand" to="/">
-          <Image src={NgatiManuLogo} rounded fluid />
+          <Image src={NgatiManuLogo} />
           <span className="navbar-brand-text">Ngāti Manu</span>
         </Link>
         <Navbar.Toggle aria-controls="navbarResponsive" />
@@ -43,7 +43,7 @@ export default function Header() {
                 <Link to="/page-2" className="nav-link">Guiding Principles &amp; Values</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/page-2" className="nav-link">History of Ngāti Manu</Link>
+                <Link to="/korero-history/" className="nav-link">History of Ngāti Manu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/page-2" className="nav-link">Pepeha</Link>

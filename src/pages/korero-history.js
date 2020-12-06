@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { Link, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
 import Container from 'react-bootstrap/Container'
@@ -9,20 +9,20 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BannerImage from "../components/bannerImage"
 
-import Registration from '../../content/assets/index/carousel/registration.png'
+import Forest from '../../content/assets/banner-images/korero_history.png'
 
 const Events = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Ngāti Manu Registration" />
+      <SEO title="Ngāti Manu History" />
       <Container fluid>
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"Ngāti Manu Registration"} image={Registration} imageAlt={"Ngāti Manu Registration"} />
+            <BannerImage heading={"Ngāti Manu History"} heading2={"Te Timatanga o Ngāti Manu"} image={Forest} imageAlt={"Ngāti Manu Registration"} />
             <div className="cta-home">
-              <div style={{ fontFamily: 'caveat', fontSize: '2rem' }}>
+              <div className="cta-content" style={{ fontFamily: 'caveat' }}>
                 E aku iti, e aku rahi <br />
                 E aku whakatamarahi ki te rangi <br />
                 Nau mai, haere mai, rēhita mai <br />

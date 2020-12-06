@@ -10,8 +10,6 @@ import BannerImage from "../components/bannerImage"
 import RepCard from "../components/repCard"
 
 import Fern from '../../content/assets/index/cards/fern.png'
-import Jennifer from '../../content/assets/tahuhu-reps/jennifer.png'
-import Phoebe from '../../content/assets/tahuhu-reps/phoebe.png'
 
 const TahuhuReps = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -24,7 +22,7 @@ const TahuhuReps = ({ data, location }) => {
           <Container fluid style={{ padding: 0, margin: 0 }}>
             <BannerImage heading={"Tāhuhu Representatives"} image={Fern} imageAlt={"Tāhuhu Representatives banner"} />
             <div className="cta-home">
-              <div>
+              <div className="cta-content">
                 <h3 style={{ fontFamily: 'caveat', fontSize: '3rem' }}>Pou Hekenga</h3>
               </div>
             </div>
