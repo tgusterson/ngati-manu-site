@@ -1,21 +1,15 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Event from "../components/eventCard"
 import BannerImage from "../components/bannerImage"
 
-import Banner from '../../content/assets/events/te_ta_o_pomare.png'
-import TeTaOPomare from '../../content/assets/events/te_ta_o_pomare.png'
-import GirlsWar from '../../content/assets/events/girls_war.png'
-import Otuihu from '../../content/assets/events/otuihu.png'
-import Whakaputanga from '../../content/assets/events/whakaputanga.png'
-import Matariki from '../../content/assets/events/matariki.png'
+import Banner from '../../content/assets/index/cards/events.png'
 
 const Events = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -31,9 +25,24 @@ const Events = ({ data, location }) => {
           </Container>
         </Row>
       </Container>
-      <Container>
-        <Event></Event>
-      </Container>
+
+      {data.allContentfulEvent.edges.map((event, index) => {
+        let left = index % 2 !== 0 ? false : true;
+        let right = index % 2 !== 0 ? true : false;
+        return (
+          <Event
+            left={left}
+            right={right}
+            image={event.node.image.file.url}
+            date={event.node.date}
+            alt={event.node.eventName}
+            heading={event.node.eventName}
+            frequency={event.node.frequency}
+            key={index}
+          />
+        )
+      })}
+
     </Layout>
   )
 }
@@ -46,6 +55,20 @@ export const pageQuery = graphql`
             siteMetadata {
             title
           }
+    }
+    allContentfulEvent(sort: {fields: createdAt, order: ASC}) {
+      edges {
+        node {
+          eventName
+          date
+          frequency
+          image {
+            file {
+              url
+            }
+          }
+        }
+      }
     }
   }
 `

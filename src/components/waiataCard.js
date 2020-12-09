@@ -12,7 +12,7 @@ export default function waiataCard({ image, lyrics, alt, audioSRC }) {
       </div>
       <div>
         <ReactMarkdown source={lyrics} />
-        <audio src={audioSRC} controls />
+        {audioSRC && <audio src={audioSRC} controls />}
       </div>
     </div>
   )

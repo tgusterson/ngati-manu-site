@@ -16,13 +16,13 @@
     @media only screen and (min-width: 370px) {
       top: 50px;
       left: 15px;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     @media only screen and (min-width: 500px) {
       top: 75px;
       left: 30px;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
 
     @media only screen and (min-width: 768px) {
@@ -38,19 +38,13 @@
     @media only screen and (min-width: 370px) {
       top: 80px;
       left: 15px;
-      font-size: 1.5rem;
-    }
-
-    @media only screen and (min-width: 370px) {
-      top: 80px;
-      left: 15px;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     @media only screen and (min-width: 500px) {
       top: 115px;
       left: 30px;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
 
     @media only screen and (min-width: 768px) {
@@ -60,6 +54,7 @@
   }
 
   img {
+    min-height: 100px;
     max-height: 400px;
     filter: brightness(50%);
   }

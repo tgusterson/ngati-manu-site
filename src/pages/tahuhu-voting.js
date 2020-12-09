@@ -20,6 +20,7 @@ const Events = ({ data, location }) => {
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
             <BannerImage heading={"Tāhuhu Election & Voting Process"} image={Weave} imageAlt={"Tāhuhu Election & Voting Process banner"} />
+            <div className="cta-home" />
           </Container>
           <Container className="markdown-content-container">
             <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />

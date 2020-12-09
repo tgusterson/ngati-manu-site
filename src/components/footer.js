@@ -19,7 +19,6 @@ export default function footer({ left, right, image }) {
           <h5>Connect with us</h5>
           <div className="footer-social-icons">
             <a href="https://www.facebook.com/eaikiangatimanu/" target="_blank" rel="noreferrer" ><AiFillFacebook className="footer-social-icons-icon" /></a>
-            <a href="https://www.facebook.com/eaikiangatimanu/" target="_blank" rel="noreferrer" ><AiFillYoutube className="footer-social-icons-icon" /></a>
           </div>
         </div>
       </div>

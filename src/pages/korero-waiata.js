@@ -24,18 +24,17 @@ const Events = ({ data, location }) => {
           </Container>
         </Row>
       </Container>
-      <WaiataCard
-        image={data.allContentfulWaiata.edges[0].node.image.file.url}
-        alt={data.allContentfulWaiata.edges[0].node.title}
-        lyrics={data.allContentfulWaiata.edges[0].node.lyrics.lyrics}
-        audioSRC={data.allContentfulWaiata.edges[0].node.audioFile.file.url}
-      />
-      <WaiataCard
-        image={data.allContentfulWaiata.edges[1].node.image.file.url}
-        alt={data.allContentfulWaiata.edges[1].node.title}
-        lyrics={data.allContentfulWaiata.edges[1].node.lyrics.lyrics}
-        audioSRC={data.allContentfulWaiata.edges[1].node.audioFile.file.url}
-      />
+      {data.allContentfulWaiata.edges.map((waiata, index) => {
+        return (
+          <WaiataCard
+            image={waiata.node.image.file.url}
+            alt={waiata.node.title}
+            lyrics={waiata.node.lyrics.lyrics}
+            audioSRC={waiata.node.audioFile !== null ? waiata.node.audioFile.file.url : null}
+            key={index}
+          />
+        )
+      })}
     </Layout>
   )
 }

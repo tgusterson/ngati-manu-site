@@ -51,6 +51,9 @@ export default function Header() {
               <NavDropdown.Item as="li">
                 <Link to="/korero-waiata/" className="nav-link">Waiata</Link>
               </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-tohu/" className="nav-link">Ngāti Manu Tohu</Link>
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Our Marae" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
@@ -74,7 +77,7 @@ export default function Header() {
                 <Link to="/page-2" className="nav-link">Pokai o Ngāti Manu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/people-cadetship/" className="nav-link">Kaitiaki o te ahi</Link>
+                <Link to="/cadetship/" className="nav-link">Kaitiaki o te ahi</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/events/" className="nav-link">Events</Link>

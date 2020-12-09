@@ -10,7 +10,7 @@ import BannerImage from "../components/bannerImage"
 
 import Waterfall from '../../content/assets/banner-images/tahuhu_strategy.png'
 
-const Events = ({ data, location }) => {
+const Strategy = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
@@ -20,6 +20,7 @@ const Events = ({ data, location }) => {
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
             <BannerImage heading={"Tāhuhu Strategy"} image={Waterfall} imageAlt={"Tāhuhu Strategy banner"} />
+            <div className="cta-home" />
             <Container className="markdown-content-container">
               <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
             </Container>
@@ -33,7 +34,7 @@ const Events = ({ data, location }) => {
   )
 }
 
-export default Events
+export default Strategy
 
 export const pageQuery = graphql`
   query {

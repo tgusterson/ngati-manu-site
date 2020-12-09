@@ -23,7 +23,7 @@ const Events = ({ data, location }) => {
             <BannerImage heading={"Ngāti Manu Guiding Principles & Values"} image={Banner} imageAlt={"Ngāti Manu Registration"} />
             <div className="cta-home">
               <div className="cta-content">
-                <h3 style={{ fontFamily: 'caveat', fontSize: '2rem' }}>
+                <h3 style={{ fontFamily: 'caveat' }}>
                   Ngā Mātāpono o Ngāti Manu: E whakaae ana, <br />
                   e manawanui ana a Ngāti Manu ki ngā mātāpono o te tika,<br /> te pono, te aroha, me te manaaki</h3>
               </div>

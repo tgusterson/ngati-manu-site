@@ -22,11 +22,12 @@ const Events = ({ data, location }) => {
           <Container fluid style={{ padding: 0, margin: 0 }}>
             <BannerImage heading={"Tāhuhu Nui o te Ngāti Manu"} image={Marae} imageAlt={"Tāhuhu Nui o te Ngāti Manu"} />
             <div className="cta-home">
-              <div style={{ fontFamily: 'caveat', fontSize: '2rem' }}>
-                Pupuhi te paura o te pū <br />
+              <div className="cta-content" style={{ fontFamily: 'caveat' }}>
+                <h3>Pupuhi te paura o te pū <br />
                   Pākarukaru ngā kōhua rino <br />
                   Tawhewhe ngā paraikete whero <br />
                   Engari, toitū te whenua <br />
+                </h3>
               </div>
             </div>
           </Container>

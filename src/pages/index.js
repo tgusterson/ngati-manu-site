@@ -28,7 +28,7 @@ const Index = ({ data, location }) => {
             <CTA />
             <HomeCard
               left
-              location={"/registration/"}
+              location={"/biodiversity/"}
               image={Biodiversity}
               heading={"Pokai o Ngāti Manu"}
               subheading={"Biodiversity Management"}
@@ -36,6 +36,7 @@ const Index = ({ data, location }) => {
             />
             <HomeCard
               right
+              location={"/cadetship/"}
               image={Cadetship}
               heading={"Kaitiaki o te Ahi"}
               subheading={"Ngāti Manu Cadetship"}

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'gatsby'
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
 
@@ -18,7 +18,7 @@ export default function HomeCarousel() {
         />
         <Carousel.Caption>
           <h3>Ngāti Manu Registration</h3>
-          <Button variant="outline-light">Learn More</Button>
+          <Link className="btn btn-outline-light" to={"/registration/"}>Learn More</Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={3000} className="carousel-item-custom">
@@ -29,7 +29,7 @@ export default function HomeCarousel() {
         />
         <Carousel.Caption>
           <h3>Ngāti Manu History</h3>
-          <Button variant="outline-light">Learn More</Button>
+          <Link className="btn btn-outline-light" to={"/korero-history/"}>Learn More</Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={3000} className="carousel-item-custom">
@@ -40,7 +40,7 @@ export default function HomeCarousel() {
         />
         <Carousel.Caption>
           <h3>Ngāti Manu Marae</h3>
-          <Button variant="outline-light">Learn More</Button>
+          <Link className="btn btn-outline-light" to={"/marae-history/"}>Learn More</Link>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
