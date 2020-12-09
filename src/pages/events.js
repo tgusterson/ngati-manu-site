@@ -7,8 +7,10 @@ import Col from 'react-bootstrap/Col'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Event from "../components/event"
+import Event from "../components/eventCard"
+import BannerImage from "../components/bannerImage"
 
+import Banner from '../../content/assets/events/te_ta_o_pomare.png'
 import TeTaOPomare from '../../content/assets/events/te_ta_o_pomare.png'
 import GirlsWar from '../../content/assets/events/girls_war.png'
 import Otuihu from '../../content/assets/events/otuihu.png'
@@ -23,28 +25,14 @@ const Events = ({ data, location }) => {
       <SEO title="Ngāti Manu Events" />
       <Container fluid>
         <Row>
-          <h1>Upcoming Events</h1>
+          <Container fluid style={{ padding: 0, margin: 0 }}>
+            <BannerImage heading={"Upcoming Events"} image={Banner} imageAlt={"Fantail bird photograph banner"} />
+            <div className="cta-home" />
+          </Container>
         </Row>
-        <Row>
-          <Col xs={6}>
-            <Event image={TeTaOPomare} />
-          </Col>
-          <Col xs={6}>
-            <Event image={GirlsWar} /></Col>
-        </Row>
-        <Row>
-          <Col xs={6}>
-            <Event image={Otuihu} />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12}>
-            <Event image={Whakaputanga} />
-          </Col>
-          <Col xs={12}>
-            <Event image={Matariki} />
-          </Col>
-        </Row>
+      </Container>
+      <Container>
+        <Event></Event>
       </Container>
     </Layout>
   )

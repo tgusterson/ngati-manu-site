@@ -1,0 +1,38 @@
+.waiata-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  margin: 20px;
+  min-height: 300px;
+
+  div:first-child {
+    width: 550px;
+    padding: 0;
+    text-align: center;
+  }
+
+  div:last-child {
+    padding: 20px;
+    width: 550px;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+
+    div:first-child {
+      width: 100%;
+      padding: 0;
+    }
+  
+    div:last-child {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+}

@@ -1,15 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Button from 'react-bootstrap/Button'
-
 export default function homeCard({ left, right, image, heading, subheading, body, location }) {
   return (
     <>
       {
         left && <div className="homeCard-container-left">
           <div className="homeCard-image">
-            <img src={image} alt="" />
+            <img src={image} alt={heading} />
           </div>
           <div className="homeCard-text-left">
             <div>
@@ -32,7 +30,7 @@ export default function homeCard({ left, right, image, heading, subheading, body
             </div>
           </div>
           <div className="homeCard-image">
-            <img src={image} alt="" />
+            <img src={image} alt={heading} />
           </div>
         </div>
       }

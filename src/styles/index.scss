@@ -1,10 +1,12 @@
 $theme-colors: (
     "primary": #dc3545,
-    "info": #380613
+    "info": #380613,
+    "light": #FFF
 );
 
 $primary: #dc3545;
 $info: #380613;
+$light: #FFF;
 
 @import "./components/header";
 @import "./components/footer";
@@ -14,5 +16,7 @@ $info: #380613;
 @import "./components/cta";
 @import "./components/homeCarousel";
 @import "./components/bannerImage";
+@import "./components/koreroHistoryContainer";
+@import "./components/waiataCard";
 @import "./components/event";
 @import "~bootstrap/scss/bootstrap";
