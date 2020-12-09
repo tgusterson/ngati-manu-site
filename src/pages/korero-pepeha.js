@@ -27,10 +27,10 @@ const Events = ({ data, location }) => {
             <div className="cta-home" />
           </Container>
         </Row>
-        <Container fluid style={{ fontSize: '1.2rem' }}>
+        <Container fluid style={{ fontSize: '1rem' }}>
           <Row className="d-flex justify-content-center align-items-center text-center mt-3 mb-3">
             <Col xs={12} md={6}>
-              <Image src={Painting} fluid alt="Portrait painting" style={{ maxWidth: '363px' }} />
+              <Image src={Painting} fluid alt="Portrait painting" style={{ width: '100%', maxWidth: '363px' }} />
             </Col>
             <Col xs={12} md={6}>
               <p className="m-1">
@@ -46,7 +46,7 @@ const Events = ({ data, location }) => {
           <hr />
           <Row className="d-flex justify-content-center align-items-center text-center mb-3">
             <Col xs={12} md={6}>
-              <Image src={Photograph} fluid alt="Historic photograph of Ngāti Manu" style={{ maxWidth: '363px' }} />
+              <Image src={Photograph} fluid alt="Historic photograph of Ngāti Manu" style={{ width: '100%', maxWidth: '363px' }} />
             </Col>
             <Col xs={12} md={6}>
               <p className="m-1">
