@@ -30,6 +30,35 @@ const Events = ({ data, location }) => {
               </div>
             </div>
           </Container>
+          <Container className="markdown-content-container markdown-content-container-tohu">
+            <Row>
+              <Col xs={12} style={{ textAlign: 'center' }}>
+                <Image src={data.allContentfulCadetship.edges[0].node.missionStatement.file.url} fluid alt={data.allContentfulCadetship.edges[0].node.missionStatementTitle} />
+              </Col>
+            </Row>
+            <hr />
+            <Row>
+              <Col md={8}>
+                <Image src={data.allContentfulCadetship.edges[0].node.koraImage.file.url} fluid alt={data.allContentfulCadetship.edges[0].node.koraImageTitle} />
+              </Col>
+              <Col md={4}>
+                <div>
+                  <ReactMarkdown source={data.allContentfulCadetship.edges[0].node.kora.kora} />
+                </div>
+              </Col>
+            </Row>
+            <hr />
+            <Row>
+              <Col md={8}>
+                <Image src={data.allContentfulCadetship.edges[0].node.pakaiahiImage.file.url} fluid alt={data.allContentfulCadetship.edges[0].node.pakaiahiImageTitle} />
+              </Col>
+              <Col md={4}>
+                <div>
+                  <ReactMarkdown source={data.allContentfulCadetship.edges[0].node.pakaiahi.pakaiahi} />
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </Row>
       </Container>
     </Layout>
@@ -45,12 +74,32 @@ export const pageQuery = graphql`
           title
         }
     }
-    allContentfulBasicPage(filter: {contentful_id: {eq: "4GrF618Uhgi8ejt6li85lH"}}) {
+    allContentfulCadetship(filter: {contentful_id: {eq: "49Z4rp1lytBIEnzy4z2GJk"}}) {
       edges {
         node {
-          body {
-            body
+          kora {
+            kora
           }
+          pakaiahi {
+            pakaiahi
+          }
+          koraImage {
+            file {
+              url
+            }
+          }
+          pakaiahiImage {
+            file {
+              url
+            }
+          }
+          missionStatement {
+            file {
+              url
+            }
+          }
+          koraImageTitle
+          pakaiahiImageTitle
         }
       }
     }

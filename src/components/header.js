@@ -32,7 +32,7 @@ export default function Header() {
                 <Link to="/tahuhu-representatives-specifications/" className="nav-link">Tāhuhu Rep Ideal Specifications</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/tahuhu-strategy/" className="nav-link">Strategy</Link>
+                <Link to="/tahuhu-strategy/" className="nav-link">Tahuhu Strategy</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/tahuhu-voting/" className="nav-link">Voting &amp; Election Process</Link>
@@ -74,13 +74,16 @@ export default function Header() {
             </NavDropdown>
             <NavDropdown title="Our People" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
-                <Link to="/page-2" className="nav-link">Pokai o Ngāti Manu</Link>
+                <Link to="/biodiversity/" className="nav-link">Pokai o Ngāti Manu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/cadetship/" className="nav-link">Kaitiaki o te ahi</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/events/" className="nav-link">Events</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/contacts/" className="nav-link">Contacts</Link>
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Ngāti Manu Registration" id="basic-nav-dropdown">

@@ -48,7 +48,7 @@ const TahuhuReps = ({ data, location }) => {
                 <li>Scotty Smith - Iritana Pōmare Rep</li>
                 <li>Sacha Cherrington - Te Whareumu Rep</li>
               </ul>
-              <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please <a href="mailto:tahuhunui@gmail.com">tahuhunui@gmail.com</a> for more information.</p>
+              <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please email <a href="mailto:tahuhunui@gmail.com">tahuhunui@gmail.com</a> for more information.</p>
             </Container>
           </Container>
         </Row>

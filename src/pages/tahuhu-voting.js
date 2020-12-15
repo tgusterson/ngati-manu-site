@@ -26,7 +26,7 @@ const Events = ({ data, location }) => {
             <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
           </Container>
           <Container>
-            <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please <a href="mailto:tahuhunui@gmail.com">tahuhunui@gmail.com</a> for more information.</p>
+            <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please email <a href="mailto:tahuhunui@gmail.com">tahuhunui@gmail.com</a> for more information.</p>
           </Container>
         </Row>
       </Container>
