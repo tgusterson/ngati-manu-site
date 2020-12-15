@@ -26,7 +26,7 @@ const Events = ({ data, location }) => {
             <BannerImage heading={"Pokai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Registration"} />
             <div className="cta-home">
               <div className="cta-content">
-                <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.introText.introText} />
+                Nā Ngāti Manu, Mā Ngati Manu, e ai ki a Ngāti Manu ki Te Herenga o Ngāti Manu hei tūāpapa ki te whakawhanake i ngā uri whakatipu, i ngā uri morehu, i ngā e haere mai ana. E ai ki ngā tikanga a Pōkai o Ngāti Manu, kia whai koha ki ngā taonga uriuri o Ranginui rāua ko Papatūānuku ki te urunga o te tangata he kitenga a-ahurea, a-tinana, a-hinengaro otirā āwairua. “Ko au ko te awa, ko te awa ko au” e ai ki a Ngāti Manu ko te oranga awa, he oranga tangata, he hononga anō hoki ki te oranga a Ranginui rāua ko Papatūānuku me ā rāua tamariki, he oranga iwi
               </div>
             </div>
           </Container>
@@ -61,7 +61,6 @@ const Events = ({ data, location }) => {
                 </Col>
               </Row>
             </Tab>
-
             <Tab eventKey="herenga" title="Herenga">
               <Row style={{ padding: '0 12px' }}>
                 <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
