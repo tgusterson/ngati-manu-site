@@ -26,7 +26,7 @@ const Events = ({ data, location }) => {
             <BannerImage heading={"Pokai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Registration"} />
             <div className="cta-home">
               <div className="cta-content">
-                Nā Ngāti Manu, Mā Ngati Manu, e ai ki a Ngāti Manu ki Te Herenga o Ngāti Manu hei tūāpapa ki te whakawhanake i ngā uri whakatipu, i ngā uri morehu, i ngā e haere mai ana. E ai ki ngā tikanga a Pōkai o Ngāti Manu, kia whai koha ki ngā taonga uriuri o Ranginui rāua ko Papatūānuku ki te urunga o te tangata he kitenga a-ahurea, a-tinana, a-hinengaro otirā āwairua. “Ko au ko te awa, ko te awa ko au” e ai ki a Ngāti Manu ko te oranga awa, he oranga tangata, he hononga anō hoki ki te oranga a Ranginui rāua ko Papatūānuku me ā rāua tamariki, he oranga iwi
+                <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.introText.introText} />
               </div>
             </div>
           </Container>
@@ -34,34 +34,6 @@ const Events = ({ data, location }) => {
         <Row>
           <Tabs defaultActiveKey="bio" id="uncontrolled-tab-example" style={{ width: '100%' }}>
             <Tab eventKey="bio" title="Biodiversity Management">
-              <Row style={{ padding: '0 12px' }}>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldOne.textFieldOne} />
-                </Col>
-                <Col xs={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageOne.file.url} fluid />
-                </Col>
-              </Row>
-              <hr />
-              <Row style={{ padding: '0 12px' }}>
-                <Col xs={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageTwo.file.url} fluid />
-                </Col>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldTwo.textFieldTwo} />
-                </Col>
-              </Row>
-              <hr />
-              <Row style={{ padding: '0 12px 8px' }}>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldThree.textFieldThree} />
-                </Col>
-                <Col xs={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageThree.file.url} fluid />
-                </Col>
-              </Row>
-            </Tab>
-            <Tab eventKey="herenga" title="Herenga">
               <Row style={{ padding: '0 12px' }}>
                 <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
                   <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldOne.textFieldOne} />
@@ -86,6 +58,34 @@ const Events = ({ data, location }) => {
                 </Col>
                 <Col xs={6}>
                   <Image src={data.allContentfulBiodiversityPage.edges[1].node.imageThree.file.url} fluid />
+                </Col>
+              </Row>
+            </Tab>
+            <Tab eventKey="herenga" title="Herenga">
+              <Row style={{ padding: '0 12px' }}>
+                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldOne.textFieldOne} />
+                </Col>
+                <Col xs={6}>
+                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageOne.file.url} fluid />
+                </Col>
+              </Row>
+              <hr />
+              <Row style={{ padding: '0 12px' }}>
+                <Col xs={6}>
+                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageTwo.file.url} fluid />
+                </Col>
+                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldTwo.textFieldTwo} />
+                </Col>
+              </Row>
+              <hr />
+              <Row style={{ padding: '0 12px 8px' }}>
+                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldThree.textFieldThree} />
+                </Col>
+                <Col xs={6}>
+                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageThree.file.url} fluid />
                 </Col>
               </Row>
             </Tab>
