@@ -4,15 +4,13 @@ import { graphql } from "gatsby"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Tab from 'react-bootstrap/Tab'
-import Tabs from 'react-bootstrap/Tabs'
 import Image from 'react-bootstrap/Image'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BannerImage from "../components/bannerImage"
 
-import Banner from '../../content/assets/banner-images/people_biodiversity.png'
+import Banner from '../../content/assets/banner-images/marae_history.png'
 
 const Events = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
