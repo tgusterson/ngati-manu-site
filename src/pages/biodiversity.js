@@ -25,7 +25,7 @@ const Events = ({ data, location }) => {
           <Container fluid style={{ padding: 0, margin: 0 }}>
             <BannerImage heading={"Pokai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Biodiversity Banner Image"} />
             <div className="cta-home">
-              <div className="cta-content" style={{ fontFamily: 'Caveat', fontSize: '1.4rem' }}>
+              <div className="cta-content" style={{ fontFamily: 'Caveat', fontSize: '1.2rem', padding: '1.4rem' }}>
                 <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.introText.introText} />
               </div>
             </div>
@@ -53,7 +53,7 @@ const Events = ({ data, location }) => {
               </Row>
               <hr />
               <Row style={{ padding: '0 12px 8px' }}>
-                <Col xs={12} md={6} style={{ padding: '15px' }}>
+                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ padding: '15px' }}>
                   <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldThree.textFieldThree} />
                 </Col>
                 <Col xs={12} md={6}>
