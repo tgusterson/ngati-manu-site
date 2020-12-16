@@ -21,70 +21,70 @@ const Events = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Ngāti Manu Biodiversity" />
       <Container fluid>
-        <Row>
+        <Row style={{ marginBottom: '1rem' }}>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"Pokai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Registration"} />
+            <BannerImage heading={"Pokai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Biodiversity Banner Image"} />
             <div className="cta-home">
-              <div className="cta-content">
+              <div className="cta-content" style={{ fontFamily: 'Caveat', fontSize: '1.4rem' }}>
                 <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.introText.introText} />
               </div>
             </div>
           </Container>
         </Row>
-        <Row>
-          <Tabs defaultActiveKey="bio" id="uncontrolled-tab-example" style={{ width: '100%' }}>
+        <Row className="biodiversity-tabs-container">
+          <Tabs defaultActiveKey="bio" id="biodiversity-tabs" style={{ width: '100%' }}>
             <Tab eventKey="bio" title="Biodiversity Management">
               <Row style={{ padding: '0 12px' }}>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ fontSize: '1.1rem', padding: '15px' }}>
                   <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldOne.textFieldOne} />
                 </Col>
-                <Col xs={6}>
+                <Col xs={12} md={6}>
                   <Image src={data.allContentfulBiodiversityPage.edges[1].node.imageOne.file.url} fluid />
                 </Col>
               </Row>
               <hr />
               <Row style={{ padding: '0 12px' }}>
-                <Col xs={6}>
+                <Col xs={12} md={6}>
                   <Image src={data.allContentfulBiodiversityPage.edges[1].node.imageTwo.file.url} fluid />
                 </Col>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                <Col xs={12} md={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
                   <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldTwo.textFieldTwo} />
                 </Col>
               </Row>
               <hr />
               <Row style={{ padding: '0 12px 8px' }}>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                <Col xs={12} md={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
                   <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldThree.textFieldThree} />
                 </Col>
-                <Col xs={6}>
+                <Col xs={12} md={6}>
                   <Image src={data.allContentfulBiodiversityPage.edges[1].node.imageThree.file.url} fluid />
                 </Col>
               </Row>
             </Tab>
             <Tab eventKey="herenga" title="Herenga">
               <Row style={{ padding: '0 12px' }}>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ fontSize: '1.1rem', padding: '15px' }}>
                   <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldOne.textFieldOne} />
                 </Col>
-                <Col xs={6}>
+                <Col xs={12} md={6}>
                   <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageOne.file.url} fluid />
                 </Col>
               </Row>
               <hr />
               <Row style={{ padding: '0 12px' }}>
-                <Col xs={6}>
+                <Col xs={12} md={6}>
                   <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageTwo.file.url} fluid />
                 </Col>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                <Col xs={12} md={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
                   <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldTwo.textFieldTwo} />
                 </Col>
               </Row>
               <hr />
               <Row style={{ padding: '0 12px 8px' }}>
-                <Col xs={6} style={{ fontSize: '1.1rem', padding: '15px' }}>
+                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ fontSize: '1.1rem', padding: '15px' }}>
                   <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldThree.textFieldThree} />
                 </Col>
-                <Col xs={6}>
+                <Col xs={12} md={6}>
                   <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageThree.file.url} fluid />
                 </Col>
               </Row>
@@ -109,7 +109,7 @@ export const pageQuery = graphql`
           title
         }
     }
-    allContentfulBiodiversityPage {
+    allContentfulBiodiversityPage(sort: {fields: createdAt, order: DESC}) {
       edges {
         node {
           imageOne {

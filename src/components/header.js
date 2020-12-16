@@ -57,20 +57,20 @@ export default function Header() {
             </NavDropdown>
             <NavDropdown title="Our Marae" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
-                <Link to="/page-2" className="nav-link">History of Marae</Link>
+                <Link to="/marae-history/" className="nav-link">History of Marae</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
+                <Link to="/marae-komiti/" className="nav-link">Karetu Marae Komiti</Link>
+              </NavDropdown.Item>
+              {/* <NavDropdown.Item as="li">
                 <Link to="/page-2" className="nav-link">Marae Layout</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/page-2" className="nav-link">Marae Tikanga</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/page-2" className="nav-link">Karetu Marae Komiti</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
                 <Link to="/page-2" className="nav-link">Booking Calendar</Link>
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
             </NavDropdown>
             <NavDropdown title="Our People" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
