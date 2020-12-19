@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
@@ -13,7 +12,7 @@ import Fern from '../../content/assets/index/cards/fern.png'
 
 const TahuhuReps = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-
+  console.log(data.allContentfulTahuhuRepresentativesContact.edges[0].node.contactEmail)
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Tāhuhu Representatives" />
@@ -29,7 +28,6 @@ const TahuhuReps = ({ data, location }) => {
             {data.allContentfulTahuhuRep.edges.map((representative, index) => {
               let left = index % 2 !== 0 ? false : true;
               let right = index % 2 !== 0 ? true : false;
-              console.log(index)
               return (
                 <RepCard
                   key={index}
@@ -48,7 +46,7 @@ const TahuhuReps = ({ data, location }) => {
                 <li>Scotty Smith - Iritana Pōmare Rep</li>
                 <li>Sacha Cherrington - Te Whareumu Rep</li>
               </ul>
-              <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please email <a href="mailto:tahuhunui@gmail.com">tahuhunui@gmail.com</a> for more information.</p>
+              <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please email <a href={"mailto:" + data.allContentfulTahuhuRepresentativesContact.edges[0].node.contactEmail}>tahuhunui@gmail.com</a> for more information.</p>
             </Container>
           </Container>
         </Row>
@@ -74,10 +72,17 @@ export const pageQuery = graphql`
             bio
           }
           picture {
-          file {
-            url
+            file {
+              url
+            }
           }
         }
+      }
+    }
+    allContentfulTahuhuRepresentativesContact(filter: {contentful_id: {eq: "40LpouKuGJRdYKV1374Htc"}}) {
+      edges {
+        node {
+          contactEmail
         }
       }
     }

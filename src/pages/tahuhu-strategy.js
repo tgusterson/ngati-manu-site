@@ -15,17 +15,17 @@ const Strategy = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Tāhuhu Strategy" />
+      <SEO title="Tāhuhu Mandate Strategy" />
       <Container fluid>
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"Tāhuhu Strategy"} image={Waterfall} imageAlt={"Tāhuhu Strategy banner"} />
+            <BannerImage heading={"Tāhuhu Mandate Strategy"} image={Waterfall} imageAlt={"Tāhuhu Mandate Strategy banner"} />
             <div className="cta-home" />
             <Container className="markdown-content-container">
               <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
             </Container>
             <Container>
-              <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please email <a href="mailto:tahuhunui@gmail.com">tahuhunui@gmail.com</a> for more information.</p>
+              <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please email <a href={"mailto:" + data.allContentfulTahuhuRepresentativesContact.edges[0].node.contactEmail}>tahuhunui@gmail.com</a> for more information.</p>
             </Container>
           </Container>
         </Row>
@@ -49,6 +49,13 @@ export const pageQuery = graphql`
           body {
             body
           }
+        }
+      }
+    }
+    allContentfulTahuhuRepresentativesContact(filter: {contentful_id: {eq: "40LpouKuGJRdYKV1374Htc"}}) {
+      edges {
+        node {
+          contactEmail
         }
       }
     }

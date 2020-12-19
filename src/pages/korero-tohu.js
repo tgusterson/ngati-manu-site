@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BannerImage from "../components/bannerImage"
 
-import Banner from '../../content/assets/banner-images/korero_waiata.png'
+import Banner from '../../content/assets/banner-images/tahuhu_tohu.png'
 
 const Tohu = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
