@@ -12,7 +12,6 @@ import Banner from '../../content/assets/banner-images/korero_waiata.png'
 
 const Events = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  console.log(data.allContentfulWaiata.edges)
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Ngāti Manu Waiata" />

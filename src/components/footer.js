@@ -1,6 +1,6 @@
 import React from 'react'
-
-import { AiFillFacebook, AiFillYoutube } from 'react-icons/ai';
+import { Link } from 'gatsby'
+import { AiFillFacebook } from 'react-icons/ai';
 
 export default function footer({ left, right, image }) {
   return (
@@ -10,9 +10,10 @@ export default function footer({ left, right, image }) {
         <div className="footer-info">
           <h5>Helpful links</h5>
           <ul className="footer-info-link">
-            <li>Contact</li>
+            <Link to="/contact/"><li>Contact Us</li></Link>
             <li>Privacy policy</li>
             <li>Terms and conditions </li>
+            <li>Website developer </li>
           </ul>
         </div>
         <div className="footer-social">
@@ -22,7 +23,7 @@ export default function footer({ left, right, image }) {
           </div>
         </div>
       </div>
-      <span style={{ textAlign: 'center', backgroundColor: '#EEE' }}>© {new Date().getFullYear()}, Created by <a href="https://www.thomgusterson.dev" target="_blank" rel="noreferrer">Thom Gusterson</a></span>
+      {/* <span style={{ textAlign: 'center', backgroundColor: '#EEE' }}>© {new Date().getFullYear()}, Created by <a href="https://www.thomgusterson.dev" target="_blank" rel="noreferrer">Thom Gusterson</a></span> */}
     </div>
   )
 }

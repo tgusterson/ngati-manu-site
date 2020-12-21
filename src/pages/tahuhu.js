@@ -63,7 +63,6 @@ const Events = ({ data, location }) => {
             <li>adequately represents all members of the claimant group; and</li>
             <li>provides that the beneficiaries of the settlement and the beneficiaries of the governance entity are identical when the settlement assets are transferred from the Crown to the claimant group.</li>
           </ul>
-          <p>The Crown will not complete settlement until a PSGE has been established.</p>
         </Container>
       </Container>
     </Layout>

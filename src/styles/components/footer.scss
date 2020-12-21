@@ -27,6 +27,22 @@
   }
 }
 
+.footer-info-link {
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #888;
+  }
+}
+
 .footer-top {
   height: 2px;
   width: 100%;

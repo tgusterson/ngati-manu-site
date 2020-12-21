@@ -62,15 +62,6 @@ export default function Header() {
               <NavDropdown.Item as="li">
                 <Link to="/marae-komiti/" className="nav-link">Karetu Marae Komiti</Link>
               </NavDropdown.Item>
-              {/* <NavDropdown.Item as="li">
-                <Link to="/page-2" className="nav-link">Marae Layout</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/page-2" className="nav-link">Marae Tikanga</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/page-2" className="nav-link">Booking Calendar</Link>
-              </NavDropdown.Item> */}
             </NavDropdown>
             <NavDropdown title="Our People" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
@@ -83,7 +74,7 @@ export default function Header() {
                 <Link to="/events/" className="nav-link">Events</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/contacts/" className="nav-link">Contacts</Link>
+                <Link to="/contact/" className="nav-link">Contact Us</Link>
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Ngāti Manu Registration" id="basic-nav-dropdown">
