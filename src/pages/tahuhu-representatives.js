@@ -12,7 +12,6 @@ import Fern from '../../content/assets/index/cards/fern.png'
 
 const TahuhuReps = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  console.log(data.allContentfulTahuhuRepresentativesContact.edges[0].node.contactEmail)
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Tāhuhu Representatives" />
