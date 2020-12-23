@@ -11,8 +11,8 @@ export default function footer({ left, right, image }) {
           <h5>Helpful links</h5>
           <ul className="footer-info-link">
             <Link to="/contact/"><li>Contact Us</li></Link>
-            <li>Privacy policy</li>
-            <li>Terms and conditions </li>
+            <Link to="/privacy/"><li>Privacy policy</li></Link>
+            <Link to="/tos/"><li>Terms and conditions</li></Link>
             <li>Website developer </li>
           </ul>
         </div>
