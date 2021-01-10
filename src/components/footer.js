@@ -13,7 +13,7 @@ export default function footer({ left, right, image }) {
             <Link to="/contact/"><li>Contact Us</li></Link>
             <Link to="/privacy/"><li>Privacy policy</li></Link>
             <Link to="/tos/"><li>Terms and conditions</li></Link>
-            <li>Website developer </li>
+            <a href="https://www.thomgusterson.dev/" target="_blank" rel="noreferrer" ><li>Website developer </li></a>
           </ul>
         </div>
         <div className="footer-social">

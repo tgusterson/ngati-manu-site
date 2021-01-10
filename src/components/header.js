@@ -60,7 +60,7 @@ export default function Header() {
                 <Link to="/marae-history/" className="nav-link">History of Marae</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/marae-komiti/" className="nav-link">Karetu Marae Komiti</Link>
+                <Link to="/marae-committee/" className="nav-link">Kāretu Māori Committee</Link>
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Our People" id="basic-nav-dropdown">
