@@ -1,0 +1,214 @@
+// CARDS
+.cadetshipCard-container-left, .cadetshipCard-container-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem;
+
+  img {
+    width:100%;
+    min-width:340px;
+    max-width:575px;
+    height: 245px;
+    object-fit: contain;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
+  strong {
+    color: $primary;
+    text-align: center;
+    
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.cadetshipCard-container-left {
+  background: #FFF;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.cadetshipCard-container-right {
+  background: #EEE;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.cadetshipCard-text-left, .cadetshipCard-text-right {
+  display: flex;
+  width: 100%;
+  min-width: 225px;
+  align-items: center;
+}
+
+.cadetshipCard-text-left {
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 1.8rem;
+  word-wrap: break-word;
+}
+
+.cadetshipCard-text-right {
+  justify-content: flex-end;
+  text-align: right;
+  padding-right: 1.8rem;
+}
+
+.cadetshipCard-text-left, .cadetshipCard-text-right {
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+    padding: 10px;
+    text-align: left;
+  }
+}
+
+.cadetshipCard-image {
+  img {
+    width:100%;
+    min-width:340px;
+    max-width:575px;
+    height: 245px;
+    object-fit: contain;
+
+    @media only screen and (max-width: 320px) {
+      min-width:175px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 15px;
+      height: auto;
+    }
+  }
+}
+
+// FIRE SECTION
+.cadetshipFireSection {
+  display: flex;
+  margin-top: 0.5rem;
+  position: relative;
+  color: #fff;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.cadetshipFireCard-container {
+  display: flex;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cadetshipFireCard-container::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-image: url("http://images.ctfassets.net/dygjh8nz9g3f/4bYcn6ba5dnHk9FKQE63xq/33b821c49efcfad8b7ea6b0e86adbf73/fire.png");
+  background-color:rgb(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(38%);
+  z-index: -1;
+
+  @media only screen and (max-width: 768px) {
+    background-size: cover;
+  }
+}
+
+.cadetshipFireCard-image {
+  position: relative; 
+  img {
+    width:100%;
+    min-width:145px;
+    object-fit: contain;
+    margin: 0.2rem;
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 15px;
+      height: auto;
+      width: 50px;
+    }
+  }
+}
+
+.cadetshipFireCard-text {
+  position: relative; 
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+  justify-content: flex-start;
+  padding: 5px;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+  word-wrap: break-word;
+  strong {
+    color: $primary;
+  }
+
+  strong, p {
+    background-color: rgba(0, 0, 0, 0.74);
+  }
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+    text-align: center;
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+// Whakatauki-section
+
+// .cadetship-whakatauki-section-image {
+//   margin: auto;
+// }
+
+.cadetship-whakatauki-section-text {
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
+
+  p:first-child > strong {
+    color: $primary;
+  }
+}
+
+
+// MĀORI ENVIRONMENTAL PRINCIPLES
+.maori-environmental-principles-image1 {
+  @media only screen and (max-width: 768px) {
+      display: none;
+  }
+}
+
+// Graduate Section
+.graduate-section-container {
+  h5 {
+    color: $primary;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  ul {
+    text-align: left;
+  }
+}

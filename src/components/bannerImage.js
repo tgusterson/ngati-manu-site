@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 export default function HomeCarousel({ image, heading, heading2, imageAlt }) {
   return (
     <div className="banner-image">

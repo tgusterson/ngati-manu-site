@@ -68,7 +68,7 @@ export default function Header() {
                 <Link to="/biodiversity/" className="nav-link">Pokai o Ngāti Manu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/cadetship/" className="nav-link">Kaitiaki o te ahi</Link>
+                <Link to="/cadetship/" className="nav-link">Ngā Kaitiaki o te Ahi</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/events/" className="nav-link">Events</Link>
