@@ -27,7 +27,7 @@ const Events = ({ data, location }) => {
               <div className="cta-content" />
             </div>
           </Container>
-          <Container className="markdown-content-container">
+          <div className="cadetship-content-container">
             <CadetshipCard left image={data.allContentfulNgaKaitiakiOTeAhiPage.edges[0].node.cardImageLeft.file.url} name={"Mission Statement"} body={data.allContentfulNgaKaitiakiOTeAhiPage.edges[0].node.cardTextOne.cardTextOne} />
             <CadetshipCard right image={data.allContentfulNgaKaitiakiOTeAhiPage.edges[0].node.cardImageRight.file.url} name={"Vision Statement"} body={data.allContentfulNgaKaitiakiOTeAhiPage.edges[0].node.cardTextTwo.cardTextTwo} />
             <hr />
@@ -65,7 +65,7 @@ const Events = ({ data, location }) => {
               </Col>
             </Row>
             <hr />
-            <Row>
+            <Row className={"column-section"}>
               <Col md={6} xs={12}>
                 <ReactMarkdown source={data.allContentfulNgaKaitiakiOTeAhiPage.edges[0].node.guidingPrinciplesColumn1.guidingPrinciplesColumn1} />
               </Col>
@@ -117,7 +117,7 @@ const Events = ({ data, location }) => {
                 alt={"Graduate Attributes Diagram"}
               />
             </div>
-          </Container>
+          </div>
         </Row>
       </Container>
     </Layout>
