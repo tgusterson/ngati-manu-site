@@ -14,7 +14,7 @@ import Banner from '../../content/assets/banner-images/korero_pepeha.png'
 import Painting from '../../content/assets/pepeha/pepeha_1.png'
 import Photograph from '../../content/assets/pepeha/pepeha_2.png'
 
-const Events = ({ data, location }) => {
+const Pepeha = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
@@ -65,7 +65,7 @@ const Events = ({ data, location }) => {
   )
 }
 
-export default Events
+export default Pepeha
 
 export const pageQuery = graphql`
   query {

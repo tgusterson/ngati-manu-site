@@ -22,3 +22,16 @@
     }
   }
 }
+
+.markdown-content-container-history, .markdown-content-container-treaty {
+  padding: 25px;
+
+  p {
+    img {
+      display: block;
+      text-align: center;
+      margin: auto;
+      border-radius: 5px;
+    }
+  }
+}

@@ -43,9 +43,6 @@ export default function Header() {
                 <Link to="/korero-principles/" className="nav-link">Guiding Principles &amp; Values</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/korero-history/" className="nav-link">History of Ngāti Manu</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
                 <Link to="/korero-pepeha/" className="nav-link">Pepeha</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
@@ -53,6 +50,21 @@ export default function Header() {
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/korero-tohu/" className="nav-link">Ngāti Manu Tohu</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-history/" className="nav-link">Te timatanga o Ngāti Manu</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-land/" className="nav-link">He kōrero mō te whenua o Te Kāretu</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-war/" className="nav-link">War on Pōmare II and Ngāti Manu</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-treaty/" className="nav-link">He whakaputanga me Te Tiriti</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-girls-war/" className="nav-link">1830’s Girls War</Link>
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Our Marae" id="basic-nav-dropdown">

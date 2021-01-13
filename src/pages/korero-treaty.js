@@ -8,22 +8,22 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BannerImage from "../components/bannerImage"
 
-import Forest from '../../content/assets/banner-images/korero_history.png'
+import BannerImg from '../../content/assets/banner-images/korero_treaty.png'
 
 const KoreroHistory = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Ngāti Manu History" />
+      <SEO title="He whakaputanga me Te Tiriti " />
       <Container fluid>
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"Te timatanga o Ngāti Manu"} image={Forest} imageAlt={"Native New Zealand bush banner photograph"} />
+            <BannerImage heading={"He whakaputanga me Te Tiriti "} image={BannerImg} imageAlt={"Treaty image"} />
             <div className="cta-home" />
           </Container>
         </Row>
-        <Container className="markdown-content-container markdown-content-container-history">
+        <Container className="markdown-content-container markdown-content-container-treaty">
           <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
         </Container>
       </Container>
@@ -40,7 +40,7 @@ export const pageQuery = graphql`
             title
           }
     }
-    allContentfulBasicPage(filter: {contentful_id: {eq: "7kSHfqiMT6CMFG978fZbCu"}}) {
+    allContentfulBasicPage(filter: {contentful_id: {eq: "Bv5n4B40Gca3yJlpR0Nyh"}}) {
       edges {
         node {
           body {

@@ -38,7 +38,7 @@ const Index = ({ data, location }) => {
               right
               location={"/cadetship/"}
               image={Cadetship}
-              heading={"Kaitiaki o te Ahi"}
+              heading={"Ngā Kaitiaki o te Ahi"}
               subheading={"Ngāti Manu Cadetship"}
               body={"An innovative marae-based learning programme & curriculum at Te Karetu Marae."}
             />

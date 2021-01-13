@@ -1,55 +1,25 @@
 .banner-image {
   position: relative;
 
-  .heading1, .heading2 {
+  .heading1 {
     position: absolute;
     color: white;
     z-index: 1;
     padding: 10px;
-    font-size: 1.2rem;
-  }
+    top: 30%;
+    left: 3%;
+    max-width: 975px;
+    font-size: 2rem;
 
-  .heading1 {
-    top: 10px;
-    left: 4px;
-
-    @media only screen and (min-width: 370px) {
-      top: 50px;
-      left: 15px;
-      font-size: 1.8rem;
+    @media only screen and (max-width: 470px) {
+      top: 30px;
+      left: 5px;
+      font-size: 1.3rem;
     }
-
-    @media only screen and (min-width: 500px) {
-      top: 75px;
-      left: 30px;
-      font-size: 2.2rem;
-    }
-
-    @media only screen and (min-width: 768px) {
-      top: 30%;
-      left: 10%;
-    }
-  }
-
-  .heading2 {
-    top: 35px;
-    left: 4px;
-
-    @media only screen and (min-width: 370px) {
-      top: 80px;
-      left: 15px;
-      font-size: 1.8rem;
-    }
-
-    @media only screen and (min-width: 500px) {
-      top: 115px;
-      left: 30px;
-      font-size: 2.2rem;
-    }
-
-    @media only screen and (min-width: 768px) {
-      top: 40%;
-      left: 10%;
+    @media only screen and (max-width: 290px) {
+      top: 30px;
+      left: 5px;
+      font-size: 1.1rem;
     }
   }
 
