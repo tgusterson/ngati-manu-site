@@ -60,7 +60,7 @@ const Events = ({ data, location }) => {
                   alt={"GUIDING WHAKATAUKĪ"}
                 />
               </Col>
-              <Col xs={12} md={9}>
+              <Col >
                 <ReactMarkdown className="cadetship-whakatauki-section-text" source={data.allContentfulNgaKaitiakiOTeAhiPage.edges[0].node.guidingWhakataikiText.guidingWhakataikiText} />
               </Col>
             </Row>

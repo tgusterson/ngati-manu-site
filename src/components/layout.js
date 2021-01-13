@@ -10,16 +10,14 @@ const Layout = ({ location, title, children }) => {
   return (
     <>
       <Header />
-      <Container
-        fluid
-        style={{
-          padding: 0, maxWidth: '1100px', boxShadow: '3px 0 15px -4px rgba(0,0,0,1), -3px 0 8px -4px rgba(0,0,0,1)'
-        }}>
+      <div
+        className={"main-layout"}
+      >
         <main>
           {children}
         </main>
         <Footer />
-      </Container>
+      </div>
     </>
   )
 }
