@@ -14,7 +14,7 @@ import BannerImage from "../components/bannerImage"
 
 import Banner from '../../content/assets/banner-images/people_biodiversity.png'
 
-const Events = ({ data, location }) => {
+const BiodiversityPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
@@ -128,7 +128,7 @@ const Events = ({ data, location }) => {
   )
 }
 
-export default Events
+export default BiodiversityPage
 
 export const pageQuery = graphql`
   query {

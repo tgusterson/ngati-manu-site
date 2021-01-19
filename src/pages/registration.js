@@ -11,7 +11,7 @@ import BannerImage from "../components/bannerImage"
 
 import Registration from '../../content/assets/index/carousel/registration.png'
 
-const Events = ({ data, location }) => {
+const RegistrationPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
@@ -35,7 +35,7 @@ const Events = ({ data, location }) => {
         </Row>
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
-            <Link className="btn btn-info mb-3" to="/">Registration Form</Link>
+            <Link className="btn btn-info mb-3" to="/registration-form/">Registration Form</Link>
           </Col>
         </Row>
       </Container>
@@ -43,7 +43,7 @@ const Events = ({ data, location }) => {
   )
 }
 
-export default Events
+export default RegistrationPage
 
 export const pageQuery = graphql`
   query {

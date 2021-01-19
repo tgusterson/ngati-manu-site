@@ -14,7 +14,7 @@ import CadetshipFireSection from "../components/cadetshipFireSection"
 
 import Banner from '../../content/assets/banner-images/people_cadetship.png'
 
-const Events = ({ data, location }) => {
+const CadetshipPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
@@ -124,7 +124,7 @@ const Events = ({ data, location }) => {
   )
 }
 
-export default Events
+export default CadetshipPage
 
 export const pageQuery = graphql`
   query {

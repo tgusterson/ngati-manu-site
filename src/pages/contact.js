@@ -10,7 +10,7 @@ import BannerImage from "../components/bannerImage"
 
 import Banner from '../../content/assets/banner-images/contact.png'
 
-const Events = ({ data, location }) => {
+const ContactPage = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata?.title || `Title`
     return (
         <Layout location={location} title={siteTitle}>
@@ -58,7 +58,7 @@ const Events = ({ data, location }) => {
     )
 }
 
-export default Events
+export default ContactPage
 
 export const pageQuery = graphql`
   query {
