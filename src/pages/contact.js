@@ -27,7 +27,7 @@ const Events = ({ data, location }) => {
                         <div className="contact-card-container">
                             {data.allContentfulContactCard.edges.map((card, index) => {
                                 return (
-                                    <Card style={{ width: '20rem', margin: '0.6rem', minHeight: '275px' }} key={index}>
+                                    <Card style={{ width: '20rem', margin: '0.6rem', minHeight: '275px', backgroundColor: "rgb(245, 245, 245)" }} key={index}>
                                         <Card.Body>
                                             <Card.Title>{card.node.title}</Card.Title>
                                             <Card.Subtitle className="mb-2 text-muted">{card.node.subtitle}</Card.Subtitle>
