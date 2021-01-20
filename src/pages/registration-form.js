@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import moment from "moment"
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
-
+import createUser from '../utils/apiRequests'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -65,8 +65,8 @@ const RegistrationForm = ({ data, location }) => {
                   dob: '',
                 }}
                 validationSchema={SignupSchema}
-                onSubmit={values => {
-                  // same shape as initial values
+                onSubmit={async values => {
+                  await createUser(values);
                   console.log(values);
                 }}
               >
