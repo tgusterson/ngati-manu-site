@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BannerImage from "../components/bannerImage"
+import NameSection from "../components/nameFormSection"
 
 import Registration from '../../content/assets/index/carousel/registration.png'
 
@@ -21,8 +22,7 @@ const SignupSchema = Yup.object().shape({
     .required('Required'),
   middleName: Yup.string()
     .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
+    .max(50, 'Too Long!'),
   lastName: Yup.string()
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
@@ -52,7 +52,7 @@ const RegistrationForm = ({ data, location }) => {
               <div style={{ fontFamily: 'caveat', fontSize: '2rem' }} />
             </div>
           </Container>
-          <Container className="signup-form">
+          <Container>
             <div>
               <h1>Signup</h1>
               <Formik
@@ -71,33 +71,11 @@ const RegistrationForm = ({ data, location }) => {
                 }}
               >
                 {({ errors, touched }) => (
-                  <Form>
-                    <label id="firstName-label">Ingoa Tuatahi / First Name</label>
-                    <Field name="firstName" aria-labelledby="firstName-label" />
-                    {errors.firstName && touched.firstName ? (
-                      <div>{errors.firstName}</div>
-                    ) : null}
-                    <Field name="middleName" placeholder="Ingoa Tuarua/ Middle Name" />
-                    {errors.middleName && touched.middleName ? (
-                      <div>{errors.middleName}</div>
-                    ) : null}
-                    <Field name="lastName" placeholder="Ingoa Whānau / Last Name" />
-                    {errors.lastName && touched.lastName ? (
-                      <div>{errors.lastName}</div>
-                    ) : null}
-                    <div id="gender-radio-group">Tāne / Wahine Rānei / Gender</div>
-                    <div role="group" aria-labelledby="gender-radio-group">
-                      <label><Field type="radio" name="gender" value="Female" />Female</label>
-                      <label><Field type="radio" name="gender" value="Male" />Male</label>
-                      <label><Field type="radio" name="gender" value="Other" />Other</label>
-                      {errors.gender && touched.gender ? (
-                        <div>{errors.gender}</div>
-                      ) : null}
-                    </div>
-                    <Field name="dob" type="date" />
-                    {errors.dob && touched.dob ? <div>{errors.dob}</div> : null}
-                    <Field name="email" type="email" placeholder="Email Address" />
-                    {errors.email && touched.email ? <div>{errors.email}</div> : null}
+                  <Form className="signup-form">
+                    <NameSection errors={errors} touched={touched} />
+                    <label id="email-label">Email Address</label>
+                    <Field name="email" type="email" aria-labelledby="email-label" />
+                    {errors.email && touched.email ? <div className="signup-form-error">{errors.email}</div> : null}
                     <button type="submit">Submit</button>
                   </Form>
                 )}

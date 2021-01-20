@@ -1,5 +1,27 @@
 .signup-form {
   input {
-    // display: block;
+    display: block;
   }
+
+  label {
+    color: #333;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+  }
+}
+
+.signup-form-gender-selector {
+  label {
+    margin: 0.2rem 1rem;
+  }
+}
+
+.signup-form-error {
+  color: $primary;
+  font-size: 0.8rem;
+}
+
+.signup-form-text-input {
+  min-width: 16rem;
 }
