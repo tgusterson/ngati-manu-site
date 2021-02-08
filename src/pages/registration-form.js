@@ -162,7 +162,7 @@ const RegistrationForm = ({ data, location }) => {
                         <p><span className="required-field">*</span><i> indicates a required field.</i></p>
                       </div>
                     }
-                    <NameSection errors={errors} touched={touched} />}
+                    {!isSubmitting && <NameSection errors={errors} touched={touched} />}
                     {!isSubmitting && <AddressSection errors={errors} touched={touched} />}
                     {!isSubmitting && <TamarikiSection errors={errors} touched={touched} />}
                     {!isSubmitting && <WhanauSection errors={errors} touched={touched} />}
