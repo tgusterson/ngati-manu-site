@@ -109,9 +109,6 @@ const RegistrationForm = ({ data, location }) => {
           </Container>
           <Container>
             <div>
-              <h1>Sign Up Form</h1>
-              <p>Enter your details below and submit. Your application will then await approval by the Ngāti Manu site administrator.</p>
-              <p><span className="required-field">*</span><i> indicates a required field.</i></p>
               <Formik
                 initialValues={{
                   firstName: '',
@@ -147,7 +144,7 @@ const RegistrationForm = ({ data, location }) => {
                 onSubmit={async (values, { resetForm }) => {
                   try {
                     await createUser(values)
-                    alert('Submission successful.')
+                    alert('Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.')
                     resetForm({ values: '' })
                   } catch (error) {
                     alert('Something went wrong, please check your data and try again.')
@@ -158,8 +155,14 @@ const RegistrationForm = ({ data, location }) => {
               >
                 {({ errors, touched, isSubmitting }) => (
                   <Form className="signup-form">
-
-                    {!isSubmitting && <NameSection errors={errors} touched={touched} />}
+                    {!isSubmitting &&
+                      <div>
+                        <h1>Register Now</h1>
+                        <p>Enter your details below and submit. Your application will then await approval by the Ngāti Manu site administrator.</p>
+                        <p><span className="required-field">*</span><i> indicates a required field.</i></p>
+                      </div>
+                    }
+                    <NameSection errors={errors} touched={touched} />}
                     {!isSubmitting && <AddressSection errors={errors} touched={touched} />}
                     {!isSubmitting && <TamarikiSection errors={errors} touched={touched} />}
                     {!isSubmitting && <WhanauSection errors={errors} touched={touched} />}

@@ -19,7 +19,7 @@ export default function FormSection({ errors, touched }) {
     return (
         <div role="group" aria-labelledby="declaration-group-label">
             <h4>DECLARATION</h4>
-            <p>I acknowledge that the information supplied will be treated as confidential and is held pursuant to the Privacy Act 1993; and by signing this form I agree that Te Tāhuhunui o Ngāti Manu (PSGE) and its related companies, trusts, business partners and agents may use this information for the purposes set out in the Privacy Statement (including, but not limited to, maintaining whakapapa records, the Iwi Register, Voters’ rolls, contact databases), contacting members regarding Iwi events and news, and for inclusion in internal and external publications.</p>
+            <p>I acknowledge that the information supplied will be treated as confidential and is held pursuant to the Privacy Act 1993; and by submitting this form I agree that Te Tāhuhunui o Ngāti Manu (PSGE) and its related companies, trusts, business partners and agents may use this information for the purposes set out in the Privacy Statement (including, but not limited to, maintaining whakapapa records, the Iwi Register, Voters’ rolls, contact databases), contacting members regarding Iwi events and news, and for inclusion in internal and external publications.</p>
             <p>I hereby declare that to the best of my knowledge;</p>
 
             <label id="declaration-group-label">
