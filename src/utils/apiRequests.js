@@ -6,16 +6,38 @@ export const createUser = async (userInfo) => {
       method: 'post',
       url: '/api/createUser',
       data: {
-        FNAME: userInfo.firstname,
-        LNAME: userInfo.lastName,
+        FIRST_NAME: userInfo.firstName,
+        MIDDLE_NAME: userInfo.middleName,
+        LAST_NAME: userInfo.lastName,
         EMAIL: userInfo.email,
-        APPROVED: "Pending"
+        GENDER: userInfo.gender,
+        GENDER: userInfo.gender,
+        DOB: userInfo.dob,
+        STREET_ADDRESS: userInfo.stAddress,
+        SUBURB: userInfo.suburb,
+        TOWN: userInfo.town,
+        COUNTRY: userInfo.country,
+        LANDLINE: userInfo.phoneNumber,
+        MOBILE: userInfo.mobile,
+        HAS_TAMIRIKI: userInfo.tamarikiCheck,
+        NUMBER_OF_TAMIRIKI: userInfo.tamarikiNumber,
+        HAS_SIBLINGS: userInfo.whanauCheck,
+        NUMBER_OF_SIBLINGS: userInfo.whanauNumber,
+        TUPUNA: userInfo.tupuna,
+        IS_WHANGAI: userInfo.whangai,
+        MOTHER_NAME: userInfo.motherName,
+        MOTHER_WHAKAPAPA: userInfo.motherWhakapapa,
+        FATHER_NAME: userInfo.fatherName,
+        MATERNAL_GRANDMOTHER_NAME: userInfo.maternalGrandmotherName,
+        PATERNAL_GRANDMOTHER_NAME: userInfo.paternalGrandmotherName,
+        MATERNAL_GRANDFATHER_NAME: userInfo.maternalGrandfatherName,
+        PATERNAL_GRANDFATHER_NAME: userInfo.paternalGrandfatherName,
+        DECLARATION_STATEMENTS: userInfo.declaration,
+        DATE_OF_FORM_SUBMISSION: userInfo.submissionDate,
       }
     })
-    console.log('success')
     return data.data
   } catch (e) {
-    console.log(e)
     return e
   }
 }

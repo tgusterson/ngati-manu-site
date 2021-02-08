@@ -1,9 +1,10 @@
 import React from 'react'
-import { Formik, Form, Field } from 'formik'
+import { Field } from 'formik'
 export default function FormSection({ errors, touched }) {
     return (
         <div role="group">
-            <label id="firstName-label">Ingoa Tuatahi / First Name</label>
+            <h4>TŌ INGOA</h4>
+            <label id="firstName-label">Ingoa Tuatahi / First Name<span className="required-field">*</span></label>
             <Field name="firstName" aria-labelledby="firstName-label" className="signup-form-text-input" />
             {errors.firstName && touched.firstName ? (
                 <div className="signup-form-error">{errors.firstName}</div>
@@ -13,12 +14,12 @@ export default function FormSection({ errors, touched }) {
             {errors.middleName && touched.middleName ? (
                 <div className="signup-form-error">{errors.middleName}</div>
             ) : null}
-            <label id="lastName-label">Ingoa Whānau / Last Name</label>
+            <label id="lastName-label">Ingoa Whānau / Last Name<span className="required-field">*</span></label>
             <Field name="lastName" aria-labelledby="lastName-label" className="signup-form-text-input" />
             {errors.lastName && touched.lastName ? (
                 <div className="signup-form-error">{errors.lastName}</div>
             ) : null}
-            <label id="gender-radio-group">Tāne / Wahine Rānei / Gender</label>
+            <label id="gender-radio-group">Tāne / Wahine Rānei / Gender<span className="required-field">*</span></label>
             <div role="group" aria-labelledby="gender-radio-group" className="signup-form-gender-selector">
                 <label><Field type="radio" name="gender" value="Female" />Female</label>
                 <label><Field type="radio" name="gender" value="Male" />Male</label>
@@ -27,9 +28,10 @@ export default function FormSection({ errors, touched }) {
                     <div className="signup-form-error">{errors.gender}</div>
                 ) : null}
             </div>
-            <label id="dobName-label">Ingoa Whānau / Last Name</label>
+            <label id="dobName-label">Rā Whānau / Date of Birth<span className="required-field">*</span></label>
             <Field name="dob" type="date" aria-labelledby="dobName-label" />
             {errors.dob && touched.dob ? <div className="signup-form-error">{errors.dob}</div> : null}
+            <hr />
         </div>
     )
 }

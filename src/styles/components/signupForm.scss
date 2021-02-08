@@ -1,11 +1,26 @@
 .signup-form {
+  display: flex;
+  flex-direction: column;
+
   input {
     display: block;
   }
 
+  input[type="checkbox"]{
+    width: 17px;
+    height: 17px;
+    display: inline;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  h4 {
+    margin: 1rem 0 0.5rem 0;
+    text-decoration: underline;
+  }
+
   label {
     color: #333;
-    font-size: 0.9rem;
     margin-top: 0.5rem;
     margin-bottom: 0.1rem;
   }
@@ -22,6 +37,42 @@
   font-size: 0.8rem;
 }
 
-.signup-form-text-input {
+.signup-form-text-input, .signup-form-select-input {
   min-width: 16rem;
+}
+
+.tupuna-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  label {
+    font-size: 17px;
+  }
+}
+
+.radio-group {
+  margin-bottom: 0.6rem;
+
+  input[type="radio"]{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 0.2rem;
+  }
+
+  label {
+    font-size: 15px;
+    margin-right: 1rem;
+  }
+}
+
+.spinner-section {
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.required-field {
+  color: $primary;
 }
