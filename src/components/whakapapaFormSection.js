@@ -2,6 +2,7 @@ import React from 'react'
 import { Field } from 'formik'
 export default function FormSection({ errors, touched }) {
     const whakapapaOptions = [
+        "",
         "Wiremu Pōmare",
         "Hare Pōmare",
         "Ihipera Tiaho",
