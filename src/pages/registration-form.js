@@ -144,7 +144,7 @@ const RegistrationForm = ({ data, location }) => {
                 onSubmit={async (values, { resetForm }) => {
                   try {
                     await createUser(values)
-                    alert('Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.')
+                    alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
                     resetForm({ values: '' })
                   } catch (error) {
                     alert('Something went wrong, please check your data and try again.')

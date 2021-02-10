@@ -28,6 +28,7 @@ export const createUser = async (userInfo) => {
         MOTHER_NAME: userInfo.motherName,
         MOTHER_WHAKAPAPA: userInfo.motherWhakapapa,
         FATHER_NAME: userInfo.fatherName,
+        FATHER_WHAKAPAPA: userInfo.fatherWhakapapa,
         MATERNAL_GRANDMOTHER_NAME: userInfo.maternalGrandmotherName,
         PATERNAL_GRANDMOTHER_NAME: userInfo.paternalGrandmotherName,
         MATERNAL_GRANDFATHER_NAME: userInfo.maternalGrandfatherName,
