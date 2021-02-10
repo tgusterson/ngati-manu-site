@@ -34,6 +34,7 @@ exports.handler = async event => {
               MOTHER_NAME: eventBody.MOTHER_NAME,
               MOTHER_WHAKAPAPA: eventBody.MOTHER_WHAKAPAPA,
               FATHER_NAME: eventBody.FATHER_NAME,
+              FATHER_WHAKAPAPA: eventBody.FATHER_WHAKAPAPA,
               MATERNAL_GRANDMOTHER_NAME: eventBody.MATERNAL_GRANDMOTHER_NAME,
               PATERNAL_GRANDMOTHER_NAME: eventBody.PATERNAL_GRANDMOTHER_NAME,
               MATERNAL_GRANDFATHER_NAME: eventBody.MATERNAL_GRANDFATHER_NAME,
