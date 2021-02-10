@@ -34,7 +34,7 @@ export default function FormSection({ errors, touched }) {
                 <div className="signup-form-error">{errors.whangai}</div>
             ) : null}
             <br />
-            <label id="motherWhakapapa-label">Mother's Whakapapa</label>
+            <label id="motherWhakapapa-label">Mother's Tupuna</label>
             <br />
             <Field name="motherWhakapapa" as="select" aria-labelledby="motherWhakapapa-label" className="signup-form-select-input">
                 {whakapapaOptions.map((option, index) => (
@@ -65,7 +65,7 @@ export default function FormSection({ errors, touched }) {
             ) : null}
 
             <br />
-            <label id="fatherWhakapapa-label">Father's Whakapapa</label>
+            <label id="fatherWhakapapa-label">Father's Tupuna</label>
             <br />
             <Field name="fatherWhakapapa" as="select" aria-labelledby="fatherWhakapapa-label" className="signup-form-select-input">
                 {whakapapaOptions.map((option, index) => (

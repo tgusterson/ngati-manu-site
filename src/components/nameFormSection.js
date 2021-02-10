@@ -19,7 +19,7 @@ export default function FormSection({ errors, touched }) {
             {errors.lastName && touched.lastName ? (
                 <div className="signup-form-error">{errors.lastName}</div>
             ) : null}
-            <label id="gender-radio-group">Tāne / Wahine Rānei / Gender<span className="required-field">*</span></label>
+            <label id="gender-radio-group">Wahine / Tāne / Rānei<span className="required-field">*</span></label>
             <div role="group" aria-labelledby="gender-radio-group" className="signup-form-gender-selector">
                 <label><Field type="radio" name="gender" value="Female" />Female</label>
                 <label><Field type="radio" name="gender" value="Male" />Male</label>
