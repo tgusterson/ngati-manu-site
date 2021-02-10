@@ -143,14 +143,16 @@ const RegistrationForm = ({ data, location }) => {
                 validationSchema={SignupSchema}
                 onSubmit={async (values, { resetForm }) => {
                   try {
-                    await createUser(values)
-                    alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
-                    resetForm({ values: '' })
+                    const response = await createUser(values)
+                    if (response === 200) {
+                      alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
+                      resetForm({ values: '' })
+                    } else {
+                      alert('Something went wrong, please try submitting the form again.')
+                    }
                   } catch (error) {
                     alert('Something went wrong, please check your data and try again.')
                   }
-
-
                 }}
               >
                 {({ errors, touched, isSubmitting }) => (

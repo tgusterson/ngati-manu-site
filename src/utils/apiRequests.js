@@ -37,7 +37,7 @@ export const createUser = async (userInfo) => {
         DATE_OF_FORM_SUBMISSION: userInfo.submissionDate,
       }
     })
-    return data.data
+    return data.status
   } catch (e) {
     return e
   }
