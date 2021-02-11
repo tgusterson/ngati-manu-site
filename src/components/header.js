@@ -66,6 +66,12 @@ export default function Header() {
               <NavDropdown.Item as="li">
                 <Link to="/korero-girls-war/" className="nav-link">1830’s Girls War</Link>
               </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-whakapapa-ngati-tu/" className="nav-link">Whakapapa to Ngāti Tu</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-kororareka/" className="nav-link">Te Pakanga o Kororāreka 1845</Link>
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Our Marae" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
