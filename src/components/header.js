@@ -12,7 +12,7 @@ import NgatiManuLogo from '../../content/assets/main/ngati-manu_logo.png'
 
 export default function Header() {
   return (
-    <Navbar bg="light" expand="lg" sticky="top">
+    <Navbar bg="light" expand="lg">
       <Container>
         <Link className="navbar-brand" to="/">
           <Image src={NgatiManuLogo} />
