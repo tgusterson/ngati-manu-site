@@ -1,5 +1,5 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
+import React from "react"
+import ReactMarkdown from "react-markdown"
 import { graphql } from "gatsby"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -26,12 +26,16 @@ const BiodiversityPage = ({ data, location }) => {
             <BannerImage heading={"Pokai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Biodiversity Banner Image"} />
             <div className="cta-home">
               <div className="cta-content" style={{ fontFamily: 'Caveat', fontSize: '1.2rem', padding: '1.4rem' }}>
-                <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[2].node.introText.introText} />
+                {/* <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[2].node.introText.introText} /> */}
               </div>
             </div>
           </Container>
         </Row>
-        <Row className="biodiversity-tabs-container">
+        <div>
+          <ReactMarkdown source={data.allContentfulPokaiTab.edges[0].node.tabName} />
+          <ReactMarkdown allowDangerousHtml source={data.allContentfulPokaiTab.edges[0].node.mainText.mainText} />
+        </div>
+        {/* <Row className="biodiversity-tabs-container">
           <Tabs defaultActiveKey="bio" id="biodiversity-tabs" style={{ width: '100%' }}>
             <Tab eventKey="bio" title="Biodiversity Management">
               <Row style={{ padding: '0 12px' }}>
@@ -121,8 +125,7 @@ const BiodiversityPage = ({ data, location }) => {
               </Row>
             </Tab>
           </Tabs>
-
-        </Row>
+        </Row> */}
       </Container>
     </Layout>
   )
@@ -137,38 +140,49 @@ export const pageQuery = graphql`
           title
         }
     }
-    allContentfulBiodiversityPage(sort: {fields: createdAt, order: DESC}) {
+    allContentfulPokaiTab(filter: {contentful_id: {eq: "2nH30EkKRSqXkS4rWtsDb4"}}) {
       edges {
         node {
-          imageOne {
-            file {
-              url
-            }
+          mainText {
+            mainText
           }
-          imageTwo {
-            file {
-              url
-            }
-          }
-          imageThree {
-            file {
-              url
-            }
-          }
-          textFieldOne {
-            textFieldOne
-          }
-          textFieldTwo {
-            textFieldTwo
-          }
-          textFieldThree {
-            textFieldThree
-          }
-          introText {
-            introText
-          }
+          tabName
         }
       }
     }
   }
 `
+
+// # allContentfulBiodiversityPage(sort: {fields: createdAt, order: DESC}) {
+//   #   edges {
+//   #     node {
+//   #       imageOne {
+//   #         file {
+//   #           url
+//   #         }
+//   #       }
+//   #       imageTwo {
+//   #         file {
+//   #           url
+//   #         }
+//   #       }
+//   #       imageThree {
+//   #         file {
+//   #           url
+//   #         }
+//   #       }
+//   #       textFieldOne {
+//   #         textFieldOne
+//   #       }
+//   #       textFieldTwo {
+//   #         textFieldTwo
+//   #       }
+//   #       textFieldThree {
+//   #         textFieldThree
+//   #       }
+//   #       introText {
+//   #         introText
+//   #       }
+//   #     }
+//   #   }
+//   # }
