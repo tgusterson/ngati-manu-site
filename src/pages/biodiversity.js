@@ -16,7 +16,12 @@ import Banner from '../../content/assets/banner-images/people_biodiversity.png'
 
 const BiodiversityPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-
+  const pokaiTabsContent = data.allContentfulBasicPage.edges.filter(tab => {
+    const ids = ["zEnpM18wgugzV0rB4NtxE", "3HO2a4mPMgcum7jHtvWpdm", "BDLyqnVdZkdb1FLdJp9Y5"]
+    return tab.node.contentful_id === ids[0] ||
+      tab.node.contentful_id === ids[1] ||
+      tab.node.contentful_id === ids[2]
+  })
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Ngāti Manu Biodiversity" />
@@ -26,106 +31,28 @@ const BiodiversityPage = ({ data, location }) => {
             <BannerImage heading={"Pokai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Biodiversity Banner Image"} />
             <div className="cta-home">
               <div className="cta-content" style={{ fontFamily: 'Caveat', fontSize: '1.2rem', padding: '1.4rem' }}>
-                {/* <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[2].node.introText.introText} /> */}
+                E ai ki ngā tikanga a Pōkai o Ngāti Manu, kia whai koha ki ngā taonga uriuri o Ranginui rāua ko Papatūānuku ki te urunga o te tangata he kitenga a-ahurea, a-tinana, a-hinengaro otirā ā-wairua.
+                “Ko au ko te awa, ko te awa ko au” e ai ki a Ngāti Manu ko te oranga awa, he oranga tangata, he hononga anō hoki ki te oranga a Ranginui rāua ko Papatūānuku me ā rāua tamariki, he oranga iwi.
               </div>
             </div>
           </Container>
         </Row>
         <div>
-          <ReactMarkdown source={data.allContentfulPokaiTab.edges[0].node.tabName} />
-          <ReactMarkdown allowDangerousHtml source={data.allContentfulPokaiTab.edges[0].node.mainText.mainText} />
+
         </div>
-        {/* <Row className="biodiversity-tabs-container">
-          <Tabs defaultActiveKey="bio" id="biodiversity-tabs" style={{ width: '100%' }}>
-            <Tab eventKey="bio" title="Biodiversity Management">
-              <Row style={{ padding: '0 12px' }}>
-                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldOne.textFieldOne} />
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[2].node.imageOne.file.url} fluid />
-                </Col>
-              </Row>
-              <hr />
-              <Row style={{ padding: '0 12px' }}>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[2].node.imageTwo.file.url} fluid />
-                </Col>
-                <Col xs={12} md={6} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[2].node.textFieldTwo.textFieldTwo} />
-                </Col>
-              </Row>
-              <hr />
-              <Row style={{ padding: '0 12px 8px' }}>
-                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[2].node.textFieldThree.textFieldThree} />
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[2].node.imageThree.file.url} fluid />
-                </Col>
-              </Row>
+        <Row className="biodiversity-tabs-container">
+          <Tabs defaultActiveKey="Whakatakinga" id="biodiversity-tabs" style={{ width: '100%' }}>
+            <Tab eventKey="Whakatakinga" title={pokaiTabsContent[0].node.title}>
+              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[0].node.body.body} className="biodiversity-tab-content" />
             </Tab>
-            <Tab eventKey="herenga" title="Herenga">
-              <Row style={{ padding: '0 12px' }}>
-                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldOne.textFieldOne} />
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[1].node.imageOne.file.url} fluid />
-                </Col>
-              </Row>
-              <hr />
-              <Row style={{ padding: '0 12px' }}>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[1].node.imageTwo.file.url} fluid />
-                </Col>
-                <Col xs={12} md={6} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldTwo.textFieldTwo} />
-                </Col>
-              </Row>
-              <hr />
-              <Row style={{ padding: '0 12px 8px' }}>
-                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[1].node.textFieldThree.textFieldThree} />
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[1].node.imageThree.file.url} fluid />
-                </Col>
-              </Row>
+            <Tab eventKey="Kokiritanga" title={pokaiTabsContent[1].node.title}>
+              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[1].node.body.body} className="biodiversity-tab-content" />
             </Tab>
-            <Tab eventKey="paetae" title="Ā matou whāinga paetae">
-              <Container style={{ marginTop: '1rem' }}>
-                <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.introText.introText} />
-              </Container>
-              <Row style={{ padding: '0 12px' }}>
-                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldOne.textFieldOne} />
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageOne.file.url} fluid />
-                </Col>
-              </Row>
-              <hr />
-              <Row style={{ padding: '0 12px' }}>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageTwo.file.url} fluid />
-                </Col>
-                <Col xs={12} md={6} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldTwo.textFieldTwo} />
-                </Col>
-              </Row>
-              <hr />
-              <Row style={{ padding: '0 12px 8px' }}>
-                <Col xs={{ order: 'last' }} md={{ order: 'first' }} style={{ padding: '15px' }}>
-                  <ReactMarkdown source={data.allContentfulBiodiversityPage.edges[0].node.textFieldThree.textFieldThree} />
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image src={data.allContentfulBiodiversityPage.edges[0].node.imageThree.file.url} fluid />
-                </Col>
-              </Row>
+            <Tab eventKey="Kawenga" title={pokaiTabsContent[2].node.title}>
+              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[2].node.body.body} className="biodiversity-tab-content" />
             </Tab>
           </Tabs>
-        </Row> */}
+        </Row>
       </Container>
     </Layout>
   )
@@ -140,49 +67,16 @@ export const pageQuery = graphql`
           title
         }
     }
-    allContentfulPokaiTab(filter: {contentful_id: {eq: "2nH30EkKRSqXkS4rWtsDb4"}}) {
+    allContentfulBasicPage {
       edges {
         node {
-          mainText {
-            mainText
+          body {
+            body
           }
-          tabName
+          title
+          contentful_id
         }
       }
     }
   }
 `
-
-// # allContentfulBiodiversityPage(sort: {fields: createdAt, order: DESC}) {
-//   #   edges {
-//   #     node {
-//   #       imageOne {
-//   #         file {
-//   #           url
-//   #         }
-//   #       }
-//   #       imageTwo {
-//   #         file {
-//   #           url
-//   #         }
-//   #       }
-//   #       imageThree {
-//   #         file {
-//   #           url
-//   #         }
-//   #       }
-//   #       textFieldOne {
-//   #         textFieldOne
-//   #       }
-//   #       textFieldTwo {
-//   #         textFieldTwo
-//   #       }
-//   #       textFieldThree {
-//   #         textFieldThree
-//   #       }
-//   #       introText {
-//   #         introText
-//   #       }
-//   #     }
-//   #   }
-//   # }

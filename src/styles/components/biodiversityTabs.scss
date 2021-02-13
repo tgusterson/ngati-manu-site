@@ -1,14 +1,25 @@
+.biodiversity-tabs-container {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
 
+  a {
+    color: $primary;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
 
-// .biodiversity-tabs-container {
-//   nav {
-//     display: flex;
-//     justify-content: center;
-//   }
+  strong {
+    color: $primary;
+  }
 
-//   a {
-//     color: $primary;
-//     font-size: 1.2rem;
-//     font-weight: 400;
-//   }
-// }
+  img {
+    object-fit: contain;
+    max-width: 100%;
+  }
+}
+
+.biodiversity-tab-content {
+    padding: 2rem;
+}

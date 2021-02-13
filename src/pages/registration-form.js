@@ -185,7 +185,7 @@ const RegistrationForm = ({ data, location }) => {
           </Container>
         </Row>
       </Container>
-    </Layout >
+    </Layout>
   )
 }
 
