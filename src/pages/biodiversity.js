@@ -43,7 +43,7 @@ const BiodiversityPage = ({ data, location }) => {
         <Row className="biodiversity-tabs-container">
           <Tabs defaultActiveKey="Whakatakinga" id="biodiversity-tabs" style={{ width: '100%' }}>
             <Tab eventKey="Whakatakinga" title={pokaiTabsContent[0].node.title}>
-              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[0].node.body.body} className="biodiversity-tab-content" />
+              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[0].node.body.body} className="biodiversity-tab-content biodiversity-tab-content-whakatainga" />
             </Tab>
             <Tab eventKey="Kokiritanga" title={pokaiTabsContent[1].node.title}>
               <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[1].node.body.body} className="biodiversity-tab-content" />

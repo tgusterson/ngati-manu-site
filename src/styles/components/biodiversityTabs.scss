@@ -23,3 +23,22 @@
 .biodiversity-tab-content {
     padding: 2rem;
 }
+
+.biodiversity-tab-content-whakatainga {
+  span {
+    display: flex;
+    justify-content: center;
+  }
+
+  iframe {
+    width: 50%;
+    height: 400px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    iframe {
+      width: 80%;
+      height: auto;
+    }
+  }
+}
