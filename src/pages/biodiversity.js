@@ -17,11 +17,18 @@ import Banner from '../../content/assets/banner-images/people_biodiversity.png'
 const BiodiversityPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const pokaiTabsContent = data.allContentfulBasicPage.edges.filter(tab => {
-    const ids = ["zEnpM18wgugzV0rB4NtxE", "3HO2a4mPMgcum7jHtvWpdm", "BDLyqnVdZkdb1FLdJp9Y5", "6Ic6JK7rqUIdYInJm25hMF"]
+    const ids = [
+      "zEnpM18wgugzV0rB4NtxE",
+      "3HO2a4mPMgcum7jHtvWpdm",
+      "BDLyqnVdZkdb1FLdJp9Y5",
+      "6Ic6JK7rqUIdYInJm25hMF",
+      "4sRtASBWzT5Y0w2q4IWE5r"
+    ]
     return tab.node.contentful_id === ids[0] ||
       tab.node.contentful_id === ids[1] ||
       tab.node.contentful_id === ids[2] ||
-      tab.node.contentful_id === ids[3]
+      tab.node.contentful_id === ids[3] ||
+      tab.node.contentful_id === ids[4]
   })
   return (
     <Layout location={location} title={siteTitle}>
@@ -54,6 +61,9 @@ const BiodiversityPage = ({ data, location }) => {
             </Tab>
             <Tab eventKey="Kaupapa" title={pokaiTabsContent[3].node.title}>
               <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[3].node.body.body} className="biodiversity-tab-content" />
+            </Tab>
+            <Tab eventKey="Bioblitz" title={pokaiTabsContent[4].node.title}>
+              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[4].node.body.body} className="biodiversity-tab-content" />
             </Tab>
           </Tabs>
         </Row>
