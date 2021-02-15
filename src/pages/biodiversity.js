@@ -81,7 +81,7 @@ export const pageQuery = graphql`
           title
         }
     }
-    allContentfulBasicPage {
+    allContentfulBasicPage(sort: {order: ASC, fields: createdAt}) {
       edges {
         node {
           body {
