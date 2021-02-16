@@ -24,6 +24,7 @@ export const createUser = async (userInfo) => {
         HAS_SIBLINGS: userInfo.whanauCheck,
         NUMBER_OF_SIBLINGS: userInfo.whanauNumber,
         TUPUNA: userInfo.tupuna,
+        TUPUNA_UNSURE_EXPLANATION: userInfo.tupunaUnsureText,
         IS_WHANGAI: userInfo.whangai,
         MOTHER_NAME: userInfo.motherName,
         MOTHER_WHAKAPAPA: userInfo.motherWhakapapa,

@@ -92,6 +92,9 @@ const SignupSchema = Yup.object().shape({
     .max(100, 'Too Long!'),
   declaration: Yup.array(Yup.string())
     .length(3, "Must agree to all of the above statements before submitting"),
+  tupunaUnsureText: Yup.string()
+    .min(1, 'Too Short!')
+    .max(100, 'Too Long!'),
 });
 
 const RegistrationForm = ({ data, location }) => {
@@ -128,6 +131,7 @@ const RegistrationForm = ({ data, location }) => {
                   whanauCheck: '',
                   whanauNumber: '',
                   tupuna: [],
+                  tupunaUnsureText: '',
                   whangai: '',
                   motherWhakapapa: '',
                   fatherWhakapapa: '',
@@ -160,7 +164,7 @@ const RegistrationForm = ({ data, location }) => {
                     {!isSubmitting &&
                       <div>
                         <h1>Register Now</h1>
-                        <p>Enter your details below and submit. Your application will then await approval by the Ngāti Manu site administrator.</p>
+                        <p>Enter your details below and submit. A notification will be sent from Tāhuhu Nui o Ngāti Manu to confirm your successful registration.</p>
                         <p><span className="required-field">*</span><i> indicates a required field.</i></p>
                       </div>
                     }

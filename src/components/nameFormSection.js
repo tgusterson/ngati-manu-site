@@ -1,6 +1,18 @@
 import React from 'react'
 import { Field } from 'formik'
 export default function FormSection({ errors, touched }) {
+    let today = new Date()
+    let dd = today.getDate()
+    let mm = today.getMonth() + 1
+    let yyyy = today.getFullYear()
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+    today = yyyy + '-' + mm + '-' + dd
+
     return (
         <div role="group">
             <h4>TŌ INGOA</h4>
@@ -29,7 +41,7 @@ export default function FormSection({ errors, touched }) {
                 ) : null}
             </div>
             <label id="dobName-label">Rā Whānau / Date of Birth<span className="required-field">*</span></label>
-            <Field name="dob" type="date" aria-labelledby="dobName-label" />
+            <Field name="dob" type="date" aria-labelledby="dobName-label" min='1930-01-01' max={today} />
             {errors.dob && touched.dob ? <div className="signup-form-error">{errors.dob}</div> : null}
             <hr />
         </div>

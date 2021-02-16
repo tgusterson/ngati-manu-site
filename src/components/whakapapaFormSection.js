@@ -20,7 +20,7 @@ export default function FormSection({ errors, touched }) {
     return (
         <div role="group" aria-labelledby="whakapapa-group-label" className="radio-group">
             <h4>WHAKAPAPA</h4>
-            <p>Please use this section to show your whakapapa connection to any Ngāti Manu tupuna you have  indicated in Section 5 (previous section).  We ask that you complete the boxes in this section that are relevant to your Ngāti Manu whakapapa.</p>
+            <p>Please use this section to show your whakapapa connection to any Ngāti Manu tupuna you have indicated above. We ask that you complete the boxes in this section that are relevant to your Ngāti Manu whakapapa.</p>
             <p>Note: If your mother or father is not connected to Ngāti Manu you are not required to complete those boxes.</p>
             <label id="whangai-label">Please indicate if you are whāngai raised within the context of a Ngāti Manu whānau:<span className="required-field">*</span></label>
             <br />
