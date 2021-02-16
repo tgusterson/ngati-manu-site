@@ -30,6 +30,7 @@ exports.handler = async event => {
               HAS_SIBLINGS: eventBody.HAS_SIBLINGS,
               NUMBER_OF_SIBLINGS: eventBody.NUMBER_OF_SIBLINGS,
               TUPUNA: eventBody.TUPUNA,
+              TUPUNA_UNSURE_EXPLANATION: eventBody.TUPUNA_UNSURE_EXPLANATION,
               IS_WHANGAI: eventBody.IS_WHANGAI,
               MOTHER_NAME: eventBody.MOTHER_NAME,
               MOTHER_WHAKAPAPA: eventBody.MOTHER_WHAKAPAPA,
