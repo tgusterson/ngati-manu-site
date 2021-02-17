@@ -3,6 +3,7 @@ import { Field } from 'formik'
 export default function FormSection({ errors, touched }) {
     const whakapapaOptions = [
         "",
+        "Not Applicable",
         "Wiremu Pōmare",
         "Hare Pōmare",
         "Ihipera Tiaho",
@@ -53,13 +54,13 @@ export default function FormSection({ errors, touched }) {
                 <div className="signup-form-error">{errors.motherName}</div>
             ) : null}
 
-            <label id="maternalGrandmotherName-label">Maternal Grandmother's Name</label>
+            <label id="maternalGrandmotherName-label">Maternal Grandmother's Name (Mother's Mother)</label>
             <Field name="maternalGrandmotherName" aria-labelledby="maternalGrandmotherName-label" className="signup-form-text-input" />
             {errors.maternalGrandmotherName && touched.maternalGrandmotherName ? (
                 <div className="signup-form-error">{errors.maternalGrandmotherName}</div>
             ) : null}
 
-            <label id="maternalGrandfatherName-label">Maternal Grandfather's Name</label>
+            <label id="maternalGrandfatherName-label">Maternal Grandfather's Name (Mother's Father)</label>
             <Field name="maternalGrandfatherName" aria-labelledby="maternalGrandfatherName-label" className="signup-form-text-input" />
             {errors.maternalGrandfatherName && touched.maternalGrandfatherName ? (
                 <div className="signup-form-error">{errors.maternalGrandfatherName}</div>
@@ -83,13 +84,13 @@ export default function FormSection({ errors, touched }) {
                 <div className="signup-form-error">{errors.fatherName}</div>
             ) : null}
 
-            <label id="paternalGrandmotherName-label">Paternal Grandmother's Name</label>
+            <label id="paternalGrandmotherName-label">Paternal Grandmother's Name (Father's Mother)</label>
             <Field name="paternalGrandmotherName" aria-labelledby="paternalGrandmotherName-label" className="signup-form-text-input" />
             {errors.paternalGrandmotherName && touched.paternalGrandmotherName ? (
                 <div className="signup-form-error">{errors.paternalGrandmotherName}</div>
             ) : null}
 
-            <label id="paternalGrandfatherName-label">Paternal Grandfather's Name</label>
+            <label id="paternalGrandfatherName-label">Paternal Grandfather's Name (Father's Father)</label>
             <Field name="paternalGrandfatherName" aria-labelledby="paternalGrandfatherName-label" className="signup-form-text-input" />
             {errors.paternalGrandfatherName && touched.paternalGrandfatherName ? (
                 <div className="signup-form-error">{errors.paternalGrandfatherName}</div>

@@ -59,7 +59,7 @@ export default function FormSection({ errors, touched }) {
              </label>
             <label id="tupuna-group-label">
                 <Field type="checkbox" name="tupuna" value="Unsure" />
-                Unsure - <i>tick this box if your unsure and enter your whanau name that whakapapa to Ngāti Manu in the text box below</i>
+                Unsure - <i>tick this box and enter your whānau name that whakapapa to Ngāti Manu in the text box below</i>
                 <br />
                 <br />
                 <Field name="tupunaUnsureText" placeholder="Enter whanau name here" className="signup-form-text-input" />
