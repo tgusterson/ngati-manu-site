@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
+import Recaptcha from "react-recaptcha"
 import moment from "moment"
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
@@ -22,6 +23,7 @@ import Registration from '../../content/assets/index/carousel/registration.png'
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 const SignupSchema = Yup.object().shape({
+  recaptcha: Yup.string().required(),
   firstName: Yup.string()
     .min(1, 'Too Short!')
     .max(100, 'Too Long!')
@@ -98,6 +100,14 @@ const SignupSchema = Yup.object().shape({
 });
 
 const RegistrationForm = ({ data, location }) => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://www.google.com/recaptcha/api.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }, [])
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
@@ -143,10 +153,20 @@ const RegistrationForm = ({ data, location }) => {
                   paternalGrandfatherName: '',
                   declaration: [],
                   submissionDate: new Date(),
+                  recaptcha: '',
                 }}
                 validationSchema={SignupSchema}
                 onSubmit={async (values, { resetForm }) => {
                   try {
+                    alert(
+                      JSON.stringify(
+                        {
+                          recaptcha: values.recaptcha,
+                        },
+                        null,
+                        2
+                      )
+                    )
                     const response = await createUser(values)
                     if (response === 200) {
                       alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
@@ -159,7 +179,7 @@ const RegistrationForm = ({ data, location }) => {
                   }
                 }}
               >
-                {({ errors, touched, isSubmitting }) => (
+                {({ errors, touched, isSubmitting, setFieldValue }) => (
                   <Form className="signup-form">
                     {!isSubmitting &&
                       <div>
@@ -175,6 +195,19 @@ const RegistrationForm = ({ data, location }) => {
                     {!isSubmitting && <TupunaSection errors={errors} touched={touched} />}
                     {!isSubmitting && <WhakapapaSection errors={errors} touched={touched} />}
                     {!isSubmitting && <DeclarationSection errors={errors} touched={touched} />}
+                    {!isSubmitting &&
+                      <Recaptcha
+                        sitekey="6LfEkV8aAAAAAPz-qBH8W6uECcju5ZN7H9-WaZfM"
+                        render="explicit"
+                        theme="dark"
+                        verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
+                        onloadCallback={() => { console.log("done loading!"); }}
+                      />
+                    }
+                    {errors.recaptcha
+                      && touched.recaptcha && (
+                        <p className="signup-form-error">{errors.recaptcha}</p>
+                      )}
                     {!isSubmitting && <div style={{ textAlign: 'center', margin: '2rem' }}><Button type="submit">Submit</Button></div>}
                     {isSubmitting &&
                       <div className="spinner-section">

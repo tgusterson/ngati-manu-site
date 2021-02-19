@@ -21,9 +21,9 @@ export default function Header() {
         <Navbar.Toggle aria-controls="navbarResponsive" />
         <Navbar.Collapse id="navbarResponsive">
           <Nav className="ml-auto" as="ul">
-            <NavDropdown title="Tahuhu" id="basic-nav-dropdown">
+            <NavDropdown title="Tāhuhu" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
-                <Link to="/tahuhu/" className="nav-link">Introduction to Tahuhu</Link>
+                <Link to="/tahuhu/" className="nav-link">Introduction to Tāhuhu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/tahuhu-representatives/" className="nav-link">Tāhuhu Representatives</Link>
@@ -32,13 +32,13 @@ export default function Header() {
                 <Link to="/tahuhu-representatives-specifications/" className="nav-link">Tāhuhu Rep Ideal Specifications</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/tahuhu-strategy/" className="nav-link">Tahuhu Strategy</Link>
+                <Link to="/tahuhu-strategy/" className="nav-link">Tāhuhu Strategy</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/tahuhu-voting/" className="nav-link">Voting &amp; Election Process</Link>
               </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Our Korero" id="basic-nav-dropdown">
+            <NavDropdown title="Our Kōrero" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
                 <Link to="/korero-principles/" className="nav-link">Guiding Principles &amp; Values</Link>
               </NavDropdown.Item>

@@ -3,11 +3,8 @@ import ReactMarkdown from "react-markdown"
 import { graphql } from "gatsby"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
-import Image from 'react-bootstrap/Image'
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BannerImage from "../components/bannerImage"
@@ -22,13 +19,15 @@ const BiodiversityPage = ({ data, location }) => {
       "3HO2a4mPMgcum7jHtvWpdm",
       "BDLyqnVdZkdb1FLdJp9Y5",
       "6Ic6JK7rqUIdYInJm25hMF",
-      "4sRtASBWzT5Y0w2q4IWE5r"
+      "4sRtASBWzT5Y0w2q4IWE5r",
+      "1jFE6GBu3HTKaKQuUoCcx8"
     ]
     return tab.node.contentful_id === ids[0] ||
       tab.node.contentful_id === ids[1] ||
       tab.node.contentful_id === ids[2] ||
       tab.node.contentful_id === ids[3] ||
-      tab.node.contentful_id === ids[4]
+      tab.node.contentful_id === ids[4] ||
+      tab.node.contentful_id === ids[5]
   })
   return (
     <Layout location={location} title={siteTitle}>
@@ -64,6 +63,12 @@ const BiodiversityPage = ({ data, location }) => {
             </Tab>
             <Tab eventKey="Bioblitz" title={pokaiTabsContent[4].node.title}>
               <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[4].node.body.body} className="biodiversity-tab-content" />
+            </Tab>
+            <Tab eventKey="Bioblitz" title={pokaiTabsContent[4].node.title}>
+              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[4].node.body.body} className="biodiversity-tab-content" />
+            </Tab>
+            <Tab eventKey="Kaitautoko" title={pokaiTabsContent[5].node.title}>
+              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[5].node.body.body} className="biodiversity-tab-content" />
             </Tab>
           </Tabs>
         </Row>

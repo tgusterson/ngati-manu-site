@@ -21,13 +21,7 @@ const RegistrationPage = ({ data, location }) => {
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
             <BannerImage heading={"Ngāti Manu Registration"} image={Registration} imageAlt={"Ngāti Manu Registration"} />
-            <div className="cta-home">
-              <div style={{ fontFamily: 'caveat', fontSize: '2rem' }}>
-                E aku iti, e aku rahi <br />
-                E aku whakatamarahi ki te rangi <br />
-                Nau mai, haere mai, rēhita mai <br />
-              </div>
-            </div>
+            <div className="cta-home" />
           </Container>
           <Container className="markdown-content-container">
             <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
