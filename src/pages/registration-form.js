@@ -158,15 +158,15 @@ const RegistrationForm = ({ data, location }) => {
                 validationSchema={SignupSchema}
                 onSubmit={async (values, { resetForm }) => {
                   try {
-                    alert(
-                      JSON.stringify(
-                        {
-                          recaptcha: values.recaptcha,
-                        },
-                        null,
-                        2
-                      )
-                    )
+                    // alert(
+                    //   JSON.stringify(
+                    //     {
+                    //       recaptcha: values.recaptcha,
+                    //     },
+                    //     null,
+                    //     2
+                    //   )
+                    // )
                     const response = await createUser(values)
                     if (response === 200) {
                       alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
@@ -195,11 +195,12 @@ const RegistrationForm = ({ data, location }) => {
                     {!isSubmitting && <TupunaSection errors={errors} touched={touched} />}
                     {!isSubmitting && <WhakapapaSection errors={errors} touched={touched} />}
                     {!isSubmitting && <DeclarationSection errors={errors} touched={touched} />}
+                    <br />
                     {!isSubmitting &&
                       <Recaptcha
-                        sitekey="6LfEkV8aAAAAAPz-qBH8W6uECcju5ZN7H9-WaZfM"
+                        sitekey="6Ld3lV8aAAAAAHh4oyT03K6eYoNllxwI41Pzhawm"
                         render="explicit"
-                        theme="dark"
+                        theme="light"
                         verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
                         onloadCallback={() => { console.log("done loading!"); }}
                       />
