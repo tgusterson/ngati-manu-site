@@ -43,3 +43,21 @@ export const createUser = async (userInfo) => {
     return e
   }
 }
+
+export const verifyCaptcha = async (captchaInfo) => {
+  const secret = process.env.RECAPTCHA_KEY
+  try {
+    const data = await axios({
+      method: 'post',
+      headers: { "Access-Control-Allow-Origin": "*", "Content-Type": "application/x-www-form-urlencoded; charset=utf-8" },
+      params: {
+        secret: secret,
+        response: captchaInfo,
+      },
+      url: `https://www.google.com/recaptcha/api/siteverify`,
+    })
+    return data.success
+  } catch (error) {
+    return error
+  }
+}

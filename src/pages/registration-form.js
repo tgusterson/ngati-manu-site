@@ -4,7 +4,7 @@ import Recaptcha from "react-recaptcha"
 import moment from "moment"
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
-import { createUser } from '../utils/apiRequests'
+import { createUser, verifyCaptcha } from '../utils/apiRequests'
 import Spinner from 'react-bootstrap/Spinner'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
@@ -108,6 +108,7 @@ const RegistrationForm = ({ data, location }) => {
     script.defer = true;
     document.body.appendChild(script);
   }, [])
+
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
@@ -157,25 +158,22 @@ const RegistrationForm = ({ data, location }) => {
                 }}
                 validationSchema={SignupSchema}
                 onSubmit={async (values, { resetForm }) => {
-                  try {
-                    // alert(
-                    //   JSON.stringify(
-                    //     {
-                    //       recaptcha: values.recaptcha,
-                    //     },
-                    //     null,
-                    //     2
-                    //   )
-                    // )
-                    const response = await createUser(values)
-                    if (response === 200) {
-                      alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
-                      resetForm({ values: '' })
-                    } else {
-                      alert('Something went wrong, please try submitting the form again.')
+                  const captcha = await verifyCaptcha(values.recaptcha)
+                  if (captcha.success === true) {
+                    try {
+                      console.log(values.recaptcha)
+                      const response = await createUser(values)
+                      if (response === 200) {
+                        alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
+                        resetForm({ values: '' })
+                      } else {
+                        alert('Something went wrong, please try submitting the form again.')
+                      }
+                    } catch (error) {
+                      alert('Something went wrong, please check your data and try again.')
                     }
-                  } catch (error) {
-                    alert('Something went wrong, please check your data and try again.')
+                  } else {
+                    alert('Captcha verification failed.')
                   }
                 }}
               >
