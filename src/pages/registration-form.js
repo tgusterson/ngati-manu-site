@@ -1,10 +1,9 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
-import Recaptcha from "react-recaptcha"
 import moment from "moment"
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
-import { createUser, verifyCaptcha } from '../utils/apiRequests'
+import { createUser } from '../utils/apiRequests'
 import Spinner from 'react-bootstrap/Spinner'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
@@ -154,26 +153,20 @@ const RegistrationForm = ({ data, location }) => {
                   paternalGrandfatherName: '',
                   declaration: [],
                   submissionDate: new Date(),
-                  recaptcha: '',
                 }}
                 validationSchema={SignupSchema}
                 onSubmit={async (values, { resetForm }) => {
-                  const captcha = await verifyCaptcha(values.recaptcha)
-                  if (captcha.success === true) {
-                    try {
-                      console.log(values.recaptcha)
-                      const response = await createUser(values)
-                      if (response === 200) {
-                        alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
-                        resetForm({ values: '' })
-                      } else {
-                        alert('Something went wrong, please try submitting the form again.')
-                      }
-                    } catch (error) {
-                      alert('Something went wrong, please check your data and try again.')
+                  try {
+                    console.log(values.recaptcha)
+                    const response = await createUser(values)
+                    if (response === 200) {
+                      alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
+                      resetForm({ values: '' })
+                    } else {
+                      alert('Something went wrong, please try submitting the form again.')
                     }
-                  } else {
-                    alert('Captcha verification failed.')
+                  } catch (error) {
+                    alert('Something went wrong, please check your data and try again.')
                   }
                 }}
               >
@@ -194,19 +187,6 @@ const RegistrationForm = ({ data, location }) => {
                     {!isSubmitting && <WhakapapaSection errors={errors} touched={touched} />}
                     {!isSubmitting && <DeclarationSection errors={errors} touched={touched} />}
                     <br />
-                    {!isSubmitting &&
-                      <Recaptcha
-                        sitekey="6Ld3lV8aAAAAAHh4oyT03K6eYoNllxwI41Pzhawm"
-                        render="explicit"
-                        theme="light"
-                        verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
-                        onloadCallback={() => { console.log("done loading!"); }}
-                      />
-                    }
-                    {errors.recaptcha
-                      && touched.recaptcha && (
-                        <p className="signup-form-error">{errors.recaptcha}</p>
-                      )}
                     {!isSubmitting && <div style={{ textAlign: 'center', margin: '2rem' }}><Button type="submit">Submit</Button></div>}
                     {isSubmitting &&
                       <div className="spinner-section">
