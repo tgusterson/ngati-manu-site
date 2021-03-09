@@ -3,7 +3,7 @@ import axios from 'axios'
 export const createUser = async (userInfo) => {
   try {
     const data = await axios({
-      method: 'post',
+      method: 'POST',
       url: '/api/createUser',
       data: {
         FIRST_NAME: userInfo.firstName,

@@ -22,7 +22,6 @@ import Registration from '../../content/assets/index/carousel/registration.png'
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 const SignupSchema = Yup.object().shape({
-  recaptcha: Yup.string().required(),
   firstName: Yup.string()
     .min(1, 'Too Short!')
     .max(100, 'Too Long!')
@@ -99,15 +98,6 @@ const SignupSchema = Yup.object().shape({
 });
 
 const RegistrationForm = ({ data, location }) => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://www.google.com/recaptcha/api.js";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-  }, [])
-
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
@@ -157,7 +147,6 @@ const RegistrationForm = ({ data, location }) => {
                 validationSchema={SignupSchema}
                 onSubmit={async (values, { resetForm }) => {
                   try {
-                    console.log(values.recaptcha)
                     const response = await createUser(values)
                     if (response === 200) {
                       alert(`Thank you for submitting the registration form. You will receive an Offical Registration Notification of successful application once it has been reviewed and accepted.`)
@@ -170,7 +159,7 @@ const RegistrationForm = ({ data, location }) => {
                   }
                 }}
               >
-                {({ errors, touched, isSubmitting, setFieldValue }) => (
+                {({ errors, touched, isSubmitting }) => (
                   <Form className="signup-form">
                     {!isSubmitting &&
                       <div>
