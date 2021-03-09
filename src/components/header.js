@@ -100,7 +100,7 @@ export default function Header() {
                 <Link to="/registration/" className="nav-link">Sign Up</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/page-2" className="nav-link">Admin Portal</Link>
+                <Link to="https://admin-ngati-manu.netlify.app/" className="nav-link">Admin Portal</Link>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
