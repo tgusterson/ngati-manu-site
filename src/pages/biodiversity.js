@@ -64,9 +64,6 @@ const BiodiversityPage = ({ data, location }) => {
             <Tab eventKey="Bioblitz" title={pokaiTabsContent[4].node.title}>
               <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[4].node.body.body} className="biodiversity-tab-content" />
             </Tab>
-            <Tab eventKey="Bioblitz" title={pokaiTabsContent[4].node.title}>
-              <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[4].node.body.body} className="biodiversity-tab-content" />
-            </Tab>
             <Tab eventKey="Kaitautoko" title={pokaiTabsContent[5].node.title}>
               <ReactMarkdown allowDangerousHtml source={pokaiTabsContent[5].node.body.body} className="biodiversity-tab-content" />
             </Tab>
