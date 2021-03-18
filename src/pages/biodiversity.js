@@ -35,7 +35,7 @@ const BiodiversityPage = ({ data, location }) => {
       <Container fluid>
         <Row style={{ marginBottom: '1rem' }}>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"Pokai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Biodiversity Banner Image"} />
+            <BannerImage heading={"Pōkai o Ngāti Manu"} image={Banner} imageAlt={"Ngāti Manu Biodiversity Banner Image"} />
             <div className="cta-home">
               <div className="cta-content" style={{ fontFamily: 'Caveat', fontSize: '1.2rem', padding: '1.4rem' }}>
                 E ai ki ngā tikanga a Pōkai o Ngāti Manu, kia whai koha ki ngā taonga uriuri o Ranginui rāua ko Papatūānuku ki te urunga o te tangata he kitenga a-ahurea, a-tinana, a-hinengaro otirā ā-wairua.

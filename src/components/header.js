@@ -83,7 +83,7 @@ export default function Header() {
             </NavDropdown>
             <NavDropdown title="Our People" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
-                <Link to="/biodiversity/" className="nav-link">Pokai o Ngāti Manu</Link>
+                <Link to="/biodiversity/" className="nav-link">Pōkai o Ngāti Manu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/cadetship/" className="nav-link">Ngā Kaitiaki o te Ahi</Link>
