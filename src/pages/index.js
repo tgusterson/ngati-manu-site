@@ -30,7 +30,7 @@ const Index = ({ data, location }) => {
               left
               location={"/biodiversity/"}
               image={Biodiversity}
-              heading={"Pokai o Ngāti Manu"}
+              heading={"Pōkai o Ngāti Manu"}
               subheading={"Biodiversity Management"}
               body={"Nā Ngāti Manu, Mā Ngati Manu, e ai ki a Ngāti Manu ki Te Herenga o Ngāti Manu hei tūāpapa ki te whakawhanake i ngā uri whakatipu, i ngā uri morehu, i ngā e haere mai ana."}
             />
