@@ -73,8 +73,8 @@ const Events = ({ data, location }) => {
                 <td>The expression of manaaki is demonstrated in the care, respect, and actions of hospitality of one to another, and in particular to the care of kaumātua, manuhiri</td>
                 <td>
                   - demonstrate by word and by action the duty of care for which Ngāti Manu is renowned <br />
-                - accord respect to one another and to others <br />
-                - upload actions of hospitality in the cooperative aspects of Ngāti Manu
+                  - accord respect to one another and to others <br />
+                  - upload actions of hospitality in the cooperative aspects of Ngāti Manu
                 </td>
               </tr>
             </tbody>
