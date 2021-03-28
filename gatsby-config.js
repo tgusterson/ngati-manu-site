@@ -61,6 +61,12 @@ module.exports = {
     // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ["FAUNA_SERVER_SECRET"]
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

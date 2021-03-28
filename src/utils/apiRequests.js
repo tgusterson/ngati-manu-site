@@ -1,5 +1,4 @@
 import axios from 'axios'
-
 export const createUser = async (userInfo) => {
   try {
     const data = await axios({
@@ -43,3 +42,38 @@ export const createUser = async (userInfo) => {
     return e
   }
 }
+
+export const sendMail = async ({
+  to,
+  html,
+  text,
+  subject,
+  contactName,
+  orgName,
+  phoneNumber,
+  kaupapa,
+  numberOfPeople,
+  submissionDate,
+  hireStartDate,
+  hireEndDate,
+  arrivalTime,
+  departureTime
+}) => {
+  try {
+    const data = await axios({
+      method: 'POST',
+      url: '/api/sendEmail',
+      data: {
+        to,
+        subject,
+        html,
+        text,
+        key: process.env.FAUNA_SERVER_SECRET
+      }
+    })
+    return data.status
+  } catch (e) {
+    return e
+  }
+}
+
