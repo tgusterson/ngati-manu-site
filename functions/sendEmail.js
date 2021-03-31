@@ -5,7 +5,7 @@ exports.handler = async event => {
   if (event.httpMethod === 'POST' && eventBody.key === process.env.FAUNA_SERVER_SECRET) {
     try {
       const mailOptions = {
-        from: process.env.EMAIL_ADDRESS,
+        from: process.env.EMAIL_ADDRESS_ALIAS,
         to: eventBody.to,
         subject: eventBody.subject,
         text: eventBody.text,
