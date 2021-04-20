@@ -1,4 +1,5 @@
 import React from "react"
+import ReactMarkdown from "react-markdown"
 import { graphql } from "gatsby"
 import moment from "moment"
 import { Formik, Form } from 'formik'
@@ -77,7 +78,7 @@ const BookingForm = ({ data, location }) => {
       <Container fluid>
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"Te Kāretu Marae Hireage"} image={Registration} imageAlt={"Ngāti Manu Marae Hireage"} />
+            <BannerImage heading={data.allContentfulBasicPage.edges[0].node.title} image={Registration} imageAlt={"Ngāti Manu Marae Hireage"} />
             <div className="cta-home">
               <div style={{ fontFamily: 'caveat', fontSize: '2rem' }} />
             </div>
@@ -158,26 +159,24 @@ const BookingForm = ({ data, location }) => {
                 {({ errors, touched, isSubmitting }) => (
                   <Form className="signup-form">
                     {!isSubmitting &&
-                      <div>
-                        <br />
-                        <p>Te Kāretu Marae can cater up to 200 people in our whare kai and sleeping up to 40 comfortably in our Wharenui. </p>
-                        <p>Kāretu Marae is Waipiro kore, Auahi kore and Tarukino kore. (Alcohol free, Smoke free and Drug free)</p>
-                        <p>If you are interested in hiring our Marae please submit an enquiries form below  and our booking administrator will be in contact.</p>
-                        <p><span className="required-field">*</span><i> indicates a required field.</i></p>
-                      </div>
+                      <Container className="markdown-content-container">
+                        <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
+                        <p style={{ marginBottom: '-10px' }}><span className="required-field">*</span><i> indicates a required field.</i></p>
+                      </Container>
                     }
-                    {!isSubmitting && <MaraeFormSection errors={errors} touched={touched} />}
-                    <br />
-                    {!isSubmitting &&
-                      <div style={{ textAlign: 'center', margin: '2rem' }}>
-                        <Button type="submit">Submit</Button>
-                      </div>}
-                    {isSubmitting &&
-                      <div className="spinner-section">
-                        <Spinner variant="primary" animation="grow" role="status">
-                          <span className="sr-only">Loading...</span>
-                        </Spinner>
-                      </div>}
+                    <Container>
+                      {!isSubmitting && <MaraeFormSection errors={errors} touched={touched} />}
+                      {!isSubmitting &&
+                        <div style={{ textAlign: 'center', margin: '2rem' }}>
+                          <Button type="submit">Submit</Button>
+                        </div>}
+                      {isSubmitting &&
+                        <div className="spinner-section">
+                          <Spinner variant="primary" animation="grow" role="status">
+                            <span className="sr-only">Loading...</span>
+                          </Spinner>
+                        </div>}
+                    </Container>
                   </Form>
                 )}
               </Formik>
@@ -185,7 +184,7 @@ const BookingForm = ({ data, location }) => {
           </Container>
         </Row>
       </Container>
-    </Layout>
+    </Layout >
   )
 }
 
@@ -197,6 +196,16 @@ export const pageQuery = graphql`
           siteMetadata {
           title
         }
+    }
+    allContentfulBasicPage(filter: {contentful_id: {eq: "6Ckix8HDbSGmRjLG3BFnEx"}})  {
+      edges {
+        node {
+          body {
+            body
+          }
+          title
+        }
+      }
     }
   }
 `

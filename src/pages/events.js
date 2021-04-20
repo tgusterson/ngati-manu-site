@@ -23,27 +23,31 @@ const Events = ({ data, location }) => {
             <BannerImage heading={"Upcoming Events"} image={Banner} imageAlt={"Fantail bird photograph banner"} />
             <div className="cta-home" />
           </Container>
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23dc3545&amp;ctz=Pacific%2FAuckland&amp;src=aW5mby5uZ2F0aW1hbnVAZ21haWwuY29t&amp;color=%23D50000&amp;showTitle=0" style={{ border: "solid 0px #777", margin: 'auto', width: "100%", minHeight: "800px", frameborder: "0", scrolling: "no" }}></iframe>
         </Row>
       </Container>
 
-      {data.allContentfulEvent.edges.map((event, index) => {
-        let left = index % 2 !== 0 ? false : true;
-        let right = index % 2 !== 0 ? true : false;
-        return (
-          <Event
-            left={left}
-            right={right}
-            image={event.node.image.file.url}
-            date={event.node.date}
-            alt={event.node.eventName}
-            heading={event.node.eventName}
-            frequency={event.node.frequency}
-            key={index}
-          />
-        )
-      })}
 
-    </Layout>
+      {/* {
+        data.allContentfulEvent.edges.map((event, index) => {
+          let left = index % 2 !== 0 ? false : true;
+          let right = index % 2 !== 0 ? true : false;
+          return (
+            <Event
+              left={left}
+              right={right}
+              image={event.node.image.file.url}
+              date={event.node.date}
+              alt={event.node.eventName}
+              heading={event.node.eventName}
+              frequency={event.node.frequency}
+              key={index}
+            />
+          )
+        })
+      } */}
+
+    </Layout >
   )
 }
 
