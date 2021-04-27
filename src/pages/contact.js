@@ -12,25 +12,25 @@ import BannerImage from "../components/bannerImage"
 import Banner from '../../content/assets/banner-images/contact.png'
 
 const ContactPage = ({ data, location }) => {
-    const siteTitle = data.site.siteMetadata?.title || `Title`
-    return (
-        <Layout location={location} title={siteTitle}>
-            <SEO title="Ngāti Manu Contact Page" />
-            <Container fluid>
-                <Row>
-                    <Container fluid style={{ padding: 0, margin: 0 }}>
-                        <BannerImage heading={data.allContentfulBasicPage.edges[0].node.title} image={Banner} imageAlt={"Contact Us page banner image"} />
-                        <div className="cta-home" />
-                    </Container>
-                </Row>
-                <Row>
-                    <Container fluid className="markdown-content-container">
-                        <ReactMarkdown plugins={[gfm]} source={data.allContentfulBasicPage.edges[0].node.body.body} className={"p-4 table table-striped table-bordered responsive"} />
-                    </Container>
-                </Row>
-            </Container>
-        </Layout>
-    )
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title="Ngāti Manu Contact Page" />
+      <Container fluid>
+        <Row>
+          <Container fluid style={{ padding: 0, margin: 0 }}>
+            <BannerImage heading={data.allContentfulBasicPage.edges[0].node.title} image={Banner} imageAlt={"Contact Us page banner image"} />
+            <div className="cta-home" />
+          </Container>
+        </Row>
+        <Row>
+          <Container fluid className="markdown-content-container">
+            <ReactMarkdown plugins={[gfm]} source={data.allContentfulBasicPage.edges[0].node.body.body} className={"p-4 table table-striped table-bordered responsive contact-form"} />
+          </Container>
+        </Row>
+      </Container>
+    </Layout>
+  )
 }
 
 export default ContactPage

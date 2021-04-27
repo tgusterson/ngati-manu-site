@@ -13,7 +13,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BannerImage from "../components/bannerImage"
 import MaraeFormSection from "../components/maraeBookingForm"
-import Registration from '../../content/assets/index/carousel/registration.png'
+import Registration from '../../content/assets/banner-images/marae_booking.png'
 
 const userHTML = `        
 <p>Tēnā koe,</p>
