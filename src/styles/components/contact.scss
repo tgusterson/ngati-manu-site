@@ -1,5 +1,22 @@
+.contact-form-parent {
+  @media only screen and (max-width: 350px) {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
 .contact-form {
+  margin: 0 !important;
+  padding: 0 !important;
+
   a {
     word-break: break-all;
+  }
+  
+  @media only screen and (max-width: 375px) {
+    font-size: 0.8rem;
+  }
+  @media only screen and (max-width: 290px) {
+    font-size: 0.6rem;
   }
 }

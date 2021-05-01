@@ -16,7 +16,7 @@ const ContactPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Ngāti Manu Contact Page" />
-      <Container fluid>
+      <Container className="contact-form-parent">
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
             <BannerImage heading={data.allContentfulBasicPage.edges[0].node.title} image={Banner} imageAlt={"Contact Us page banner image"} />
@@ -24,8 +24,8 @@ const ContactPage = ({ data, location }) => {
           </Container>
         </Row>
         <Row>
-          <Container fluid className="markdown-content-container">
-            <ReactMarkdown plugins={[gfm]} source={data.allContentfulBasicPage.edges[0].node.body.body} className={"p-4 table table-striped table-bordered responsive contact-form"} />
+          <Container className="markdown-content-container contact-form">
+            <ReactMarkdown plugins={[gfm]} source={data.allContentfulBasicPage.edges[0].node.body.body} className={"p-4 table table-striped table-bordered responsive"} />
           </Container>
         </Row>
       </Container>

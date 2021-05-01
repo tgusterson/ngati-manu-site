@@ -27,7 +27,7 @@ const Pepeha = ({ data, location }) => {
             <div className="cta-home" />
           </Container>
         </Row>
-        <Container fluid style={{ fontSize: '1rem' }}>
+        {/* <Container fluid style={{ fontSize: '1rem' }}>
           <Row className="d-flex justify-content-center align-items-center text-center mt-3 mb-3">
             <Col xs={12} md={6}>
               <Image src={Painting} fluid alt="Portrait painting" style={{ width: '100%', maxWidth: '363px' }} />
@@ -59,6 +59,9 @@ const Pepeha = ({ data, location }) => {
             </p>
             </Col>
           </Row>
+        </Container> */}
+        <Container className="markdown-content-container pepeha">
+          <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
         </Container>
       </Container>
     </Layout>
@@ -74,7 +77,7 @@ export const pageQuery = graphql`
           title
         }
     }
-    allContentfulBasicPage(filter: {contentful_id: {eq: "4GrF618Uhgi8ejt6li85lH"}}) {
+    allContentfulBasicPage(filter: {contentful_id: {eq: "2ZE4bChnb0l0wQEfsrnccG"}}) {
       edges {
         node {
           body {
