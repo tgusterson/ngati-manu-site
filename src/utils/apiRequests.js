@@ -67,8 +67,7 @@ export const sendMail = async ({
         to,
         subject,
         html,
-        text,
-        key: process.env.FAUNA_SERVER_SECRET
+        text
       }
     })
     return data.status

@@ -2,7 +2,7 @@ const transporter = require("./utils/emailClient");
 
 exports.handler = async event => {
   const eventBody = JSON.parse(event.body);
-  if (event.httpMethod === 'POST' && eventBody.key === process.env.FAUNA_SERVER_SECRET) {
+  if (event.httpMethod === 'POST') {
     try {
       const mailOptions = {
         from: process.env.EMAIL_ADDRESS_ALIAS,
