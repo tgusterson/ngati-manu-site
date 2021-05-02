@@ -1,8 +1,7 @@
 const transporter = require("./utils/emailClient");
 
 exports.handler = async event => {
-  //changing hash?
-  console.log(event)
+  console.log(event.body)
   const eventBody = JSON.parse(event.body);
   if (event.httpMethod === 'POST') {
     try {
@@ -19,6 +18,7 @@ exports.handler = async event => {
         body: JSON.stringify(info)
       };
     } catch (e) {
+      console.log(e)
       return {
         statusCode: 500,
         body: JSON.stringify(e)

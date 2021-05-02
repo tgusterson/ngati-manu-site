@@ -47,17 +47,7 @@ export const sendMail = async ({
   to,
   html,
   text,
-  subject,
-  contactName,
-  orgName,
-  phoneNumber,
-  kaupapa,
-  numberOfPeople,
-  submissionDate,
-  hireStartDate,
-  hireEndDate,
-  arrivalTime,
-  departureTime
+  subject
 }) => {
   try {
     const data = await axios({
