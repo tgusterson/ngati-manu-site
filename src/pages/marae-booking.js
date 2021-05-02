@@ -102,46 +102,39 @@ const BookingForm = ({ data, location }) => {
                 validationSchema={SignupSchema}
                 onSubmit={async (values, { resetForm }) => {
                   try {
-                    // const adminEmail = await sendMail({
-                    //   to: 'maraebookings@ngatimanu.com',
-                    //   subject: `Marae Booking Request From ${values.orgName}`,
-                    //   html: `<p>Marae booking request received from ${values.contactName} at ${values.submissionDate}.</p>
-                    //     <p>Booking details:</p>
-                    //     <ul>
-                    //       <li>Organisation Name: ${values.orgName}</li>
-                    //       <li>Contact Name: ${values.contactName}</li>
-                    //       <li>Email Address: ${values.email}</li>
-                    //       <li>Phone: ${values.phoneNumber}</li>
-                    //       <li>Kaupapa (Reason for hireage): ${values.kaupapa}</li>
-                    //       <li>Number of People: ${values.numberOfPeople}</li>
-                    //       <li>Hire Start Date: ${values.hireStartDate}</li>
-                    //       <li>Hire End Date: ${values.hireEndDate}</li>
-                    //       <li>Arrival Time: ${values.arrivalTime}</li>
-                    //       <li>Departure Time: ${values.departureTime}</li>
-                    //     </ul>
-                    //   `,
-                    //   text: `<p>Marae booking request received from ${values.contactName} at ${values.submissionDate}</p>
-                    //   <p>Booking details:</p>
-                    //   <ul>
-                    //     <li>Contact Name: ${values.contactName}</li>
-                    //     <li>Organisation Name: ${values.orgName}</li>
-                    //     <li>Email Address: ${values.email}</li>
-                    //     <li>Phone: ${values.phoneNumber}</li>
-                    //     <li>Kaupapa (Reason for hireage): ${values.kaupapa}</li>
-                    //     <li>Number of People: ${values.numberOfPeople}</li>
-                    //     <li>Hire Start Date (yyyy-mm-dd): ${values.hireStartDate}</li>
-                    //     <li>Hire End Date (yyyy-mm-dd): ${values.hireEndDate}</li>
-                    //     <li>Arrival Time (24 hour format): ${values.arrivalTime}</li>
-                    //     <li>Departure Time (24 hour format): ${values.departureTime}</li>
-                    //   </ul>
-                    //   `,
-
-                    // })
                     const adminEmail = await sendMail({
                       to: 'maraebookings@ngatimanu.com',
                       subject: `Marae Booking Request From ${values.orgName}`,
-                      html: `<p>Marae booking request received</p>`,
-                      text: `Marae booking request received`,
+                      html: `<p>Marae booking request received from ${values.contactName} at ${values.submissionDate}.</p>
+                        <p>Booking details:</p>
+                        <ul>
+                          <li>Organisation Name: ${values.orgName}</li>
+                          <li>Contact Name: ${values.contactName}</li>
+                          <li>Email Address: ${values.email}</li>
+                          <li>Phone: ${values.phoneNumber}</li>
+                          <li>Kaupapa (Reason for hireage): ${values.kaupapa}</li>
+                          <li>Number of People: ${values.numberOfPeople}</li>
+                          <li>Hire Start Date: ${values.hireStartDate}</li>
+                          <li>Hire End Date: ${values.hireEndDate}</li>
+                          <li>Arrival Time: ${values.arrivalTime}</li>
+                          <li>Departure Time: ${values.departureTime}</li>
+                        </ul>
+                      `,
+                      text: `<p>Marae booking request received from ${values.contactName} at ${values.submissionDate}</p>
+                      <p>Booking details:</p>
+                      <ul>
+                        <li>Contact Name: ${values.contactName}</li>
+                        <li>Organisation Name: ${values.orgName}</li>
+                        <li>Email Address: ${values.email}</li>
+                        <li>Phone: ${values.phoneNumber}</li>
+                        <li>Kaupapa (Reason for hireage): ${values.kaupapa}</li>
+                        <li>Number of People: ${values.numberOfPeople}</li>
+                        <li>Hire Start Date (yyyy-mm-dd): ${values.hireStartDate}</li>
+                        <li>Hire End Date (yyyy-mm-dd): ${values.hireEndDate}</li>
+                        <li>Arrival Time (24 hour format): ${values.arrivalTime}</li>
+                        <li>Departure Time (24 hour format): ${values.departureTime}</li>
+                      </ul>
+                      `,
 
                     })
                     if (adminEmail === 200) {
