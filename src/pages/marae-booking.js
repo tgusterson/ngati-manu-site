@@ -105,8 +105,7 @@ const BookingForm = ({ data, location }) => {
                     const adminEmail = await sendMail({
                       to: 'maraebookings@ngatimanu.com',
                       subject: `Marae Booking Request From ${values.orgName}`,
-                      html: `
-                        <p>Marae booking request received from ${values.contactName} at ${values.submissionDate}.</p>
+                      html: `<p>Marae booking request received from ${values.contactName} at ${values.submissionDate}.</p>
                         <p>Booking details:</p>
                         <ul>
                           <li>Organisation Name: ${values.orgName}</li>
@@ -121,8 +120,7 @@ const BookingForm = ({ data, location }) => {
                           <li>Departure Time: ${values.departureTime}</li>
                         </ul>
                       `,
-                      text: `
-                      <p>Marae booking request received from ${values.contactName} at ${values.submissionDate}</p>
+                      text: `<p>Marae booking request received from ${values.contactName} at ${values.submissionDate}</p>
                       <p>Booking details:</p>
                       <ul>
                         <li>Contact Name: ${values.contactName}</li>
