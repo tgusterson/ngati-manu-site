@@ -50,11 +50,11 @@ export const pageQuery = graphql`
     allContentfulWaiata {
       edges {
         node {
-          audioFile {
-            file {
-              url
-            }
-          }
+          # audioFile {
+          #   file {
+          #     url
+          #   }
+          # }
           lyrics {
             lyrics
           }
