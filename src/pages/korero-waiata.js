@@ -29,7 +29,7 @@ const Events = ({ data, location }) => {
             image={waiata.node.image.file.url}
             alt={waiata.node.title}
             lyrics={waiata.node.lyrics.lyrics}
-            audioSRC={waiata.node.audioFile !== null ? waiata.node.audioFile.file.url : null}
+            // audioSRC={waiata.node.audioFile !== null ? waiata.node.audioFile.file.url : null}
             key={index}
           />
         )
