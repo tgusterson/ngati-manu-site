@@ -15,11 +15,11 @@ const KoreroHistory = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="He whakaputanga me Te Tiriti " />
+      <SEO title="He Whakaputanga me Te Tiriti " />
       <Container fluid>
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"He whakaputanga me Te Tiriti "} image={BannerImg} imageAlt={"Treaty image"} />
+            <BannerImage heading={"He Whakaputanga me Te Tiriti "} image={BannerImg} imageAlt={"Treaty image"} />
             <div className="cta-home" />
           </Container>
         </Row>

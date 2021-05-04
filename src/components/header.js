@@ -21,23 +21,6 @@ export default function Header() {
         <Navbar.Toggle aria-controls="navbarResponsive" />
         <Navbar.Collapse id="navbarResponsive">
           <Nav className="ml-auto" as="ul">
-            <NavDropdown title="Tāhuhu" id="basic-nav-dropdown">
-              <NavDropdown.Item as="li">
-                <Link to="/tahuhu/" className="nav-link">Introduction to Tāhuhu</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/tahuhu-representatives/" className="nav-link">Tāhuhu Representatives</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/tahuhu-representatives-specifications/" className="nav-link">Tāhuhu Rep Ideal Specifications</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/tahuhu-strategy/" className="nav-link">Tāhuhu Strategy</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/tahuhu-voting/" className="nav-link">Voting &amp; Election Process</Link>
-              </NavDropdown.Item>
-            </NavDropdown>
             <NavDropdown title="Our Kōrero" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
                 <Link to="/korero-principles/" className="nav-link">Guiding Principles &amp; Values</Link>
@@ -55,22 +38,22 @@ export default function Header() {
                 <Link to="/korero-history/" className="nav-link">Te timatanga o Ngāti Manu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/korero-land/" className="nav-link">He kōrero mō te whenua o Te Kāretu</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/korero-war/" className="nav-link">War on Pōmare II and Ngāti Manu</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/korero-treaty/" className="nav-link">He whakaputanga me Te Tiriti</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item as="li">
-                <Link to="/korero-girls-war/" className="nav-link">1830’s Girls War</Link>
+                <Link to="/korero-girls-war/" className="nav-link">Girls War, 1830</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/korero-whakapapa-ngati-tu/" className="nav-link">Whakapapa to Ngāti Tu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
+                <Link to="/korero-land/" className="nav-link">He kōrero mō te whenua o Te Kāretu</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-treaty/" className="nav-link">He whakaputanga me Te Tiriti</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
                 <Link to="/korero-kororareka/" className="nav-link">Te Pakanga o Kororāreka 1845</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/korero-war/" className="nav-link">The Sacking of Otuihu Pā</Link>
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Our Marae" id="basic-nav-dropdown">
@@ -97,6 +80,23 @@ export default function Header() {
               <NavDropdown.Item as="li">
                 <Link to="/contact/" className="nav-link">Contact Us</Link>
               </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Our Tāhuhu" id="basic-nav-dropdown">
+              <NavDropdown.Item as="li">
+                <Link to="/tahuhu/" className="nav-link">Introduction to Tāhuhu</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/tahuhu-representatives/" className="nav-link">Tāhuhu Representatives</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/tahuhu-representatives-specifications/" className="nav-link">Tāhuhu Rep Ideal Specifications</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item as="li">
+                <Link to="/tahuhu-strategy/" className="nav-link">Te Whakaaetanga Alliance</Link>
+              </NavDropdown.Item>
+              {/* <NavDropdown.Item as="li">
+                <Link to="/tahuhu-voting/" className="nav-link">Voting &amp; Election Process</Link>
+              </NavDropdown.Item> */}
             </NavDropdown>
             <NavDropdown title="Ngāti Manu Registration" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">

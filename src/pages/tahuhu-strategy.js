@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
@@ -15,11 +15,11 @@ const Strategy = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Tāhuhu Mandate Strategy" />
+      <SEO title="Te Whakaaetanga Alliance" />
       <Container fluid>
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"Tāhuhu Mandate Strategy"} image={Waterfall} imageAlt={"Tāhuhu Mandate Strategy banner"} />
+            <BannerImage heading={"Te Whakaaetanga Alliance"} image={Waterfall} imageAlt={"Te Whakaaetanga Alliance banner"} />
             <div className="cta-home" />
             <Container className="markdown-content-container">
               <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />

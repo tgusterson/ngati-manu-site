@@ -15,11 +15,11 @@ const KoreroWar = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Waging War on Pōmare II and Ngāti Manu - The Crown’s Unjustified Attack of Ōtūihu Pā" />
+      <SEO title="The Sacking of Otuihu Pā" />
       <Container fluid>
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>
-            <BannerImage heading={"Waging War on Pōmare II and Ngāti Manu - The Crown’s Unjustified Attack of Ōtūihu Pā"} image={BannerImg} imageAlt={"Waging War on Pōmare II and Ngāti Manu - The Crown’s Unjustified Attack of Ōtūihu Pā"} />
+            <BannerImage heading={"The Sacking of Otuihu Pā"} image={BannerImg} imageAlt={"The Sacking of Otuihu Pā"} />
             <div className="cta-home" />
           </Container>
         </Row>

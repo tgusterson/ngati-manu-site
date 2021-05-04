@@ -15,7 +15,7 @@ const KoreroHistory = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="1830's Girls War" />
+      <SEO title="Girls War, 1830" />
       <Container fluid>
         <Row>
           <Container fluid style={{ padding: 0, margin: 0 }}>

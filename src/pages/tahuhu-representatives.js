@@ -1,5 +1,6 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
+import ReactMarkdown from "react-markdown";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
@@ -40,13 +41,16 @@ const TahuhuReps = ({ data, location }) => {
             })}
             <hr />
             <Container>
-              Other Tāhuhu Representatives:
+              {/* Other Tāhuhu Representatives:
               <ul>
                 <li>Scotty Smith - Iritana Pōmare Rep</li>
                 <li>Sacha Cherrington - Te Whareumu Rep</li>
-              </ul>
+              </ul> */}
               {/* <p>If you are interested in supporting our Tāhuhu Representatives or upcoming Tāhuhu events please email <a href={"mailto:" + data.allContentfulTahuhuRepresentativesContact.edges[0].node.contactEmail}>tahuhunui@gmail.com</a> for more information.</p> */}
-              <p>If you are interested in supporting, please <Link to={"/contact/"}>contact us</Link>.</p>
+              {/* <p>If you are interested in supporting, please <Link to={"/contact/"}>contact us</Link>.</p> */}
+            </Container>
+            <Container className="markdown-content-container">
+              <ReactMarkdown source={data.allContentfulBasicPage.edges[0].node.body.body} />
             </Container>
           </Container>
         </Row>
@@ -75,6 +79,15 @@ export const pageQuery = graphql`
             file {
               url
             }
+          }
+        }
+      }
+    }
+    allContentfulBasicPage(filter: {contentful_id: {eq: "5HdW78AfKAUCGZE7xD0ku3"}}) {
+      edges {
+        node {
+          body {
+            body
           }
         }
       }
