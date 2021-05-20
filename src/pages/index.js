@@ -46,7 +46,7 @@ const Index = ({ data, location }) => {
               left
               location={"/tahuhu/"}
               image={Fern}
-              heading={"Tāhuhu Nui o te Ngāti Manu"}
+              heading={"Te Tāhuhu Nui O Ngāti Manu"}
               subheading={"Governance"}
               body={"Nā Ngāti Manu, Mā Ngati Manu, e ai ki a Ngāti Manu."}
             />

@@ -47,7 +47,7 @@ export default function Header() {
                 <Link to="/korero-land/" className="nav-link">He kōrero mō te whenua o Te Kāretu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
-                <Link to="/korero-treaty/" className="nav-link">He whakaputanga me Te Tiriti</Link>
+                <Link to="/korero-treaty/" className="nav-link">He Whakaputanga me Te Tiriti</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/korero-kororareka/" className="nav-link">Te Pakanga o Kororāreka 1845</Link>
@@ -83,7 +83,7 @@ export default function Header() {
             </NavDropdown>
             <NavDropdown title="Our Tāhuhu" id="basic-nav-dropdown">
               <NavDropdown.Item as="li">
-                <Link to="/tahuhu/" className="nav-link">Introduction to Tāhuhu</Link>
+                <Link to="/tahuhu/" className="nav-link">Introduction Te Tāhuhu Nui O Ngāti Manu</Link>
               </NavDropdown.Item>
               <NavDropdown.Item as="li">
                 <Link to="/tahuhu-representatives/" className="nav-link">Tāhuhu Representatives</Link>
