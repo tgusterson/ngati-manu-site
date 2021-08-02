@@ -18,6 +18,7 @@ import WhanauSection from "../components/whanauFormSection"
 import TupunaSection from "../components/tupunaFormSection"
 import WhakapapaSection from "../components/whakapapaFormSection"
 import DeclarationSection from "../components/declarationFormSection"
+import { sendMail } from '../utils/apiRequests'
 import Registration from '../../content/assets/index/carousel/registration.png'
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
@@ -156,6 +157,17 @@ const RegistrationForm = ({ data, location }) => {
                     }
                   } catch (error) {
                     alert('Something went wrong, please check your data and try again.')
+                  }
+                  try {
+                    await sendMail({
+                      to: 'tahuhu.ngatimanu@gmail.com',
+                      subject: `User Signup Notification from ${values.firstName} ${values.lastName}`,
+                      html: `<p>Marae booking request received from ${values.firstName} ${values.lastName} at ${values.submissionDate}.</p>
+                        <p>Visit the <a href="https://admin-ngati-manu.netlify.app/">admin portal</a> to view the full application details & approve / decline the request.</p>
+                      `,
+                    })
+                  } catch (error) {
+                    console.log('Notification email failed.')
                   }
                 }}
               >
