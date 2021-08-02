@@ -13,8 +13,6 @@ exports.handler = async event => {
       };
       let emailTransport = await createTransporter();
       let response = await emailTransport.sendMail(mailOptions);
-      console.log(response)
-      console.log('ran ran ran ran ran ran')
       return {
         statusCode: 200
         // body: JSON.stringify(emailTransport)
