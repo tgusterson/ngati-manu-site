@@ -135,7 +135,6 @@ const BookingForm = ({ data, location }) => {
                         <li>Departure Time (24 hour format): ${values.departureTime}</li>
                       </ul>
                       `,
-
                     })
                     if (adminEmail === 200) {
                       const userEmail = await sendMail({
