@@ -12,7 +12,7 @@ exports.handler = async event => {
         html: eventBody.html
       };
       let emailTransport = await createTransporter();
-      let response = await emailTransport.sendMail(mailOptions);
+      await emailTransport.sendMail(mailOptions);
       return {
         statusCode: 200
         // body: JSON.stringify(emailTransport)
