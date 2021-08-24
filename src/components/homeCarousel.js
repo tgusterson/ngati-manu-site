@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Carousel from 'react-bootstrap/Carousel'
-import Button from 'react-bootstrap/Button'
+import React from "react"
+import { Link } from "gatsby"
+import Carousel from "react-bootstrap/Carousel"
+import Button from "react-bootstrap/Button"
 
-import Marae from '../../content/assets/index/carousel/marae.png'
-import History from '../../content/assets/index/carousel/history.png'
-import Registration from '../../content/assets/index/carousel/registration.png'
+import Marae from "../../content/assets/index/carousel/marae.png"
+import History from "../../content/assets/index/carousel/history.png"
+import Registration from "../../content/assets/index/carousel/registration.png"
 
 export default function HomeCarousel() {
   return (
@@ -18,7 +18,9 @@ export default function HomeCarousel() {
         />
         <Carousel.Caption>
           <h3>Ngāti Manu Registration</h3>
-          <Link className="btn btn-outline-light" to={"/registration/"}>Learn More</Link>
+          <Link className="btn btn-outline-light" to={"/registration/"}>
+            Learn More
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={3000} className="carousel-item-custom">
@@ -29,7 +31,9 @@ export default function HomeCarousel() {
         />
         <Carousel.Caption>
           <h3>Ngāti Manu History</h3>
-          <Link className="btn btn-outline-light" to={"/korero-history/"}>Learn More</Link>
+          <Link className="btn btn-outline-light" to={"/korero-history/"}>
+            Learn More
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={3000} className="carousel-item-custom">
@@ -39,8 +43,10 @@ export default function HomeCarousel() {
           alt="Ngati Manu Marae slide"
         />
         <Carousel.Caption>
-          <h3>Ngāti Manu Marae</h3>
-          <Link className="btn btn-outline-light" to={"/marae-history/"}>Learn More</Link>
+          <h3>Te Kāretu Marae</h3>
+          <Link className="btn btn-outline-light" to={"/marae-history/"}>
+            Learn More
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
