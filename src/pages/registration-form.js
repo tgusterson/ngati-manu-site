@@ -162,7 +162,7 @@ const RegistrationForm = ({ data, location }) => {
                     await sendMail({
                       to: 'tahuhu.ngatimanu@gmail.com',
                       subject: `User Signup Notification from ${values.firstName} ${values.lastName}`,
-                      html: `<p>Marae booking request received from ${values.firstName} ${values.lastName} at ${values.submissionDate}.</p>
+                      html: `<p>User signup request received from ${values.firstName} ${values.lastName} at ${values.submissionDate}.</p>
                         <p>Visit the <a href="https://admin-ngati-manu.netlify.app/">admin portal</a> to view the full application details & approve / decline the request.</p>
                       `,
                     })
